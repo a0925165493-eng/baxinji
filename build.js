@@ -4,7 +4,8 @@ const fs = require('fs'), path = require('path');
 const R = f => JSON.parse(fs.readFileSync(path.join(__dirname, 'data', f + '.json'), 'utf8'));
 const shop = R('shop'), hours = R('hours'), notice = R('notice'), featured = R('featured'),
       videos = R('videos'), menu = R('menu'), levels = R('levels'), faq = R('faq');
-const U = 'https://baxinji.netlify.app/';
+// 網站正式網址（換主機時改這裡，或在主機設定環境變數 SITE_URL）
+const U = (process.env.SITE_URL || 'https://baxinji.pages.dev/').replace(/\/?$/, '/');
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const img = p => !p ? '' : (/^https?:|^data:/.test(p) ? p : p.replace(/^\/+/, ''));
 
@@ -78,7 +79,7 @@ const up = String(menu.updated || '').slice(0, 10).replace(/-/g, '/');
 
 let html = fs.readFileSync(path.join(__dirname, 'src', 'template.html'), 'utf8');
 const put = (k, v) => { if (!html.includes(k)) throw new Error('template 缺少 ' + k); html = html.split(k).join(v); };
-put('/*__DATA__*/', DATA); put('{{JSONLD}}', JSONLD); put('{{MENU_STATIC}}', MENU_STATIC); put('{{FAQ_STATIC}}', FAQ_STATIC); put('{{NOTICE}}', NOTICE); put('{{UPDATED}}', up);
+put('/*__DATA__*/', DATA); put('{{JSONLD}}', JSONLD); put('{{MENU_STATIC}}', MENU_STATIC); put('{{FAQ_STATIC}}', FAQ_STATIC); put('{{NOTICE}}', NOTICE); put('{{UPDATED}}', up); put('{{SITE}}', U);
 // 網頁上預先填好的店家文字
 ['name', 'branch', 'slogan', 'intro', 'address', 'phone', 'parking'].forEach(k => {
   html = html.replace(new RegExp(`(data-c="${k}"[^>]*>)[^<]*(<)`, 'g'), (m, a, b) => a + esc(shop[k] || '') + b);
@@ -89,7 +90,9 @@ const out = path.join(__dirname, 'dist');
 fs.rmSync(out, { recursive: true, force: true }); fs.mkdirSync(out);
 fs.writeFileSync(path.join(out, 'index.html'), html);
 const copy = (src, dst) => { if (!fs.existsSync(src)) return; if (fs.statSync(src).isDirectory()) { fs.mkdirSync(dst, { recursive: true }); fs.readdirSync(src).forEach(f => copy(path.join(src, f), path.join(dst, f))); } else fs.copyFileSync(src, dst); };
-['img', 'admin', 'og-image.jpg', 'robots.txt'].forEach(f => copy(path.join(__dirname, f), path.join(out, f)));
+['img', 'admin', 'og-image.jpg'].forEach(f => copy(path.join(__dirname, f), path.join(out, f)));
+const cfg = path.join(out, 'admin', 'config.yml'); fs.writeFileSync(cfg, fs.readFileSync(cfg, 'utf8').split('{{SITE}}').join(U));
+fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${U}sitemap.xml\n`);
 const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
 fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${U}</loc><lastmod>${today}</lastmod></url>\n</urlset>\n`);
 console.log('OK 網站已產生到 dist/');

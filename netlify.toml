@@ -6,3 +6,10 @@
   for = "/admin/*"
   [headers.values]
     X-Robots-Tag = "noindex"
+
+# 網站已搬到 Cloudflare Pages，舊網址全部轉過去
+[[redirects]]
+  from = "/*"
+  to = "https://baxinji.pages.dev/:splat"
+  status = 301
+  force = true

@@ -22,9 +22,9 @@ auth:
   avatar_url_claim: avatar_url
 
 locale: zh_Hant
-site_url: https://baxinji.netlify.app
-display_url: https://baxinji.netlify.app
-logo_url: https://baxinji.netlify.app/img/logo.png
+site_url: {{SITE}}
+display_url: {{SITE}}
+logo_url: {{SITE}}img/logo.png
 media_folder: img
 public_folder: img
 

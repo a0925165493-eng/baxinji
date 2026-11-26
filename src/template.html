@@ -10,9 +10,9 @@
 <meta property="og:site_name" content="八辛吉手作麻辣燙">
 <meta property="og:title" content="八辛吉手作麻辣燙｜台南永康人氣麻辣鴨血、臭豆腐">
 <meta property="og:description" content="台南永康八辛吉手作麻辣燙，八種辛香料熬製手作麻辣湯頭，招牌鴨血、臭豆腐、讚岐烏龍麵。提供多種辣度與不辣選擇，歡迎內用、外帶及外送。">
-<meta property="og:url" content="https://baxinji.netlify.app/">
-<meta property="og:image" content="https://baxinji.netlify.app/og-image.jpg">
-<meta property="og:image:secure_url" content="https://baxinji.netlify.app/og-image.jpg">
+<meta property="og:url" content="{{SITE}}">
+<meta property="og:image" content="{{SITE}}og-image.jpg">
+<meta property="og:image:secure_url" content="{{SITE}}og-image.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,7 +23,7 @@
 <meta name="geo.region" content="TW-TNN">
 <meta name="geo.placename" content="臺南市永康區">
 <meta name="geo.position" content="23.0257796;120.2596072">
-<link rel="canonical" href="https://baxinji.netlify.app/">
+<link rel="canonical" href="{{SITE}}">
 <link rel="icon" href="img/logo.png">
 <title>八辛吉手作麻辣燙官方網站｜台南永康麻辣燙・麻辣鴨血・臭豆腐</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -892,7 +892,7 @@ $$('.copyaddr').forEach(b=>b.addEventListener('click',async()=>{try{await naviga
 {const t=SHOP.phone.replace(/[^\d+]/g,'');if(t)$('#mbCall').href='tel:'+t;$('#mbMap').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(SHOP.name+' '+SHOP.address);}
 /* 分享 */
 async function share(sec){
-  const url=(location.protocol.startsWith('http')&&!/claude|anthropic/i.test(location.hostname)?location.origin+location.pathname:'https://baxinji.netlify.app/')+'#'+sec;
+  const url=(location.protocol.startsWith('http')&&!/claude|anthropic/i.test(location.hostname)?location.origin+location.pathname:'{{SITE}}')+'#'+sec;
   const text=sec==='menu-sec'?'八辛吉手作麻辣燙的菜單':`八辛吉手作麻辣燙｜${SHOP.address}｜${SHOP.phone}`;
   try{ if(navigator.share){ await navigator.share({title:'八辛吉手作麻辣燙',text,url}); return; } }catch(e){ if(e.name==='AbortError') return; }
   try{ await navigator.clipboard.writeText(text+' '+url); flash('已複製連結，可以貼給朋友'); }catch(e){ flash('請複製這個網址分享：'+url,6000); }
