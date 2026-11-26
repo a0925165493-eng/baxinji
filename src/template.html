@@ -587,13 +587,13 @@ body{overflow-x:clip}
   <div class="quick"><div class="wrap">
     <a href="#menu-sec"><b>看菜單</b><span id="quickPrice">鍋底 $110 起・烏龍麵 $165</span></a>
     <a href="#order"><b>外帶外送</b><span>電話・LINE・Uber Eats・foodpanda</span></a>
-    <a href="#videos"><b>活動影音</b><span>TikTok・YouTube 人氣影片</span></a>
+    <a href="#videos"><b>活動影音</b><span>TikTok・IG・YouTube 影片</span></a>
     <a href="#spice"><b>選辣度</b><span>微微辣～大辣・也有不辣</span></a>
   </div></div>
 
   <section class="media" id="videos"><div class="wrap">
     <div class="head"><div><div class="kicker">VIDEOS</div><h2>活動影音</h2></div><a class="more" id="ttMore" href="#videos" target="_blank" rel="noopener">更多影片在 TikTok ↗</a></div>
-    <p class="lead" style="margin:-18px 0 22px">TikTok、YouTube 人氣影片，往右滑看更多。按下播放鍵才會播放。</p>
+    <p class="lead" style="margin:-18px 0 22px">TikTok、Instagram、YouTube 人氣影片，往右滑看更多。按下播放鍵才會播放。</p>
     <div class="vwrap">
       <button class="varrow prev" type="button" id="vPrev" aria-label="上一支">‹</button>
       <div class="vrow" id="vrow" role="list"></div>
@@ -855,7 +855,7 @@ function closeModals(){$$('.modal.open').forEach(m=>m.classList.remove('open'));
 fill();
 /* 活動影音 */
 const vUrl=v=>v.url||(v.p==='yt'?`https://www.youtube.com/shorts/${v.id}`:`https://www.tiktok.com/@98vip888/video/${v.id}`);
-const vSite=v=>v.p==='yt'?'YouTube':'TikTok';
+const vSite=v=>v.p==='yt'?'YouTube':v.p==='ig'||/instagram\.com/.test(v.url||'')?'Instagram':'TikTok';
 const canEmbed=/^https?:$/.test(location.protocol) && !/claude|anthropic/i.test(location.hostname);
 function openTT(v){const a=document.createElement('a');a.href=vUrl(v);a.target='_blank';a.rel='noopener';a.click();}
 function renderVideos(){
@@ -869,6 +869,7 @@ function renderVideos(){
     $$('#vrow video').forEach(x=>x.pause());
     if(v.src){ box.innerHTML=`<video src="${esc(v.src)}" poster="${esc(v.poster||v.cover)}" controls playsinline preload="metadata"></video>`; const vd=box.querySelector('video'); vd.play().catch(()=>{}); }
     else if(canEmbed&&v.p==='yt'){ box.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&playsinline=1&rel=0" title="${esc(v.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`; }
+    else if(canEmbed&&v.p==='ig'){ box.innerHTML=`<iframe src="https://www.instagram.com/${v.kind||'p'}/${v.id}/embed/" title="${esc(v.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen scrolling="no" style="background:#fff"></iframe>`; }
     else if(canEmbed&&v.id&&v.p!=='link'){ box.innerHTML=`<iframe src="https://www.tiktok.com/embed/v2/${v.id}" title="${esc(v.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`; }
     else openTT(v);
   });

@@ -23,10 +23,15 @@ const VIDEOS = (videos.list || []).filter(v => v.id)
   .map((v, i) => ({ v, i, o: Number.isFinite(+v.order) && String(v.order ?? '').trim() !== '' ? +v.order : Infinity }))
   .sort((a, b) => a.o - b.o || a.i - b.i)
   .map(({ v }) => ({ id: String(v.id).trim(), title: v.title || '', desc: v.desc || '', cover: img(v.cover), src: '', poster: '' }));
-// 影片連結：支援 TikTok（編號、完整網址、短網址 vt.tiktok.com）和 YouTube（Shorts、一般影片、youtu.be）
+// 影片連結：支援 TikTok（編號、完整網址、短網址 vt.tiktok.com）、YouTube（Shorts、一般影片、youtu.be）、Instagram（貼文、Reels）
 function youtubeId(raw) {
   const m = raw.match(/(?:youtube\.com\/(?:shorts\/|embed\/|live\/|watch\?(?:.*&)?v=)|youtu\.be\/)([\w-]{11})/);
   return m ? m[1] : '';
+}
+function instagramId(raw) {
+  if (/instagram\.com\/share\//.test(raw)) return null; // 分享短連結（/share/…）不是影片編號，改成點擊開啟
+  const m = raw.match(/instagram\.com\/(?:[\w.]+\/)?(p|reels?|tv)\/([\w-]+)/);
+  return m ? { kind: m[1] === 'p' ? 'p' : m[1] === 'tv' ? 'tv' : 'reel', code: m[2] } : null;
 }
 async function tiktokId(raw) {
   const m = raw.match(/video\/(\d{15,})/) || raw.match(/^(\d{15,})$/);
@@ -40,10 +45,13 @@ async function resolveVideo(v) {
   const raw = v.id;
   const yt = youtubeId(raw);
   if (yt) return { ...v, p: 'yt', id: yt, url: 'https://www.youtube.com/shorts/' + yt, cover: v.cover || `https://i.ytimg.com/vi/${yt}/hqdefault.jpg` };
+  const ig = instagramId(raw);
+  if (ig) return { ...v, p: 'ig', id: ig.code, kind: ig.kind, url: `https://www.instagram.com/${ig.kind}/${ig.code}/`, cover: v.cover || 'img/logo.png' };
+  if (/instagram\.com/.test(raw)) { console.warn('⚠ 看不懂的 IG 連結，改成點擊開啟原連結：', raw); return { ...v, p: 'link', id: '', url: raw, cover: v.cover || 'img/logo.png' }; }
   const tt = await tiktokId(raw);
   if (tt) return { ...v, p: 'tt', id: tt, url: (shop.tiktok ? String(shop.tiktok).replace(/\/?$/, '') : 'https://www.tiktok.com/@98vip888') + '/video/' + tt };
   // 短網址換不到編號（TikTok 擋自動連線）：照樣顯示，按播放直接開原連結
-  if (/^https?:\/\//.test(raw)) { console.warn('⚠ 換不到 TikTok 影片編號，改成點擊開啟原連結：', raw); return { ...v, p: 'link', id: '', url: raw }; }
+  if (/^https?:\/\//.test(raw)) { console.warn('⚠ 換不到影片編號，改成點擊開啟原連結：', raw); return { ...v, p: 'link', id: '', url: raw }; }
   console.warn('⚠ 看不懂的影片連結，這支先不顯示：', raw); return null;
 }
 (async () => {
