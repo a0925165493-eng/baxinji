@@ -13,5 +13,18 @@
 #goHome:hover{background:#5e0c10}
 </style>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+/* 打開後台時自動前往登入頁（Google 登入），不用再多按一次「登入」 */
+(function(){
+  var tries=0, KEY='bx_auto_login';
+  if(sessionStorage.getItem(KEY)) return;          // 這個分頁已自動跳過一次，就不再自動跳（避免取消登入時一直跳）
+  var t=setInterval(function(){
+    if(++tries>40){clearInterval(t);return;}
+    var b=[].slice.call(document.querySelectorAll('button')).find(function(x){return /^(登入|Login)$/i.test((x.textContent||'').trim());});
+    if(b){clearInterval(t);sessionStorage.setItem(KEY,'1');b.click();}
+    else if(document.querySelector('[class*="AppHeader"],[class*="SidebarContainer"]')){clearInterval(t);} // 已登入
+  },250);
+})();
+</script>
 </body>
 </html>
