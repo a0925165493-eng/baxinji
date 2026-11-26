@@ -1,13 +1,25 @@
 # 八辛吉官網後台設定
 backend:
-  name: github
+  name: git-gateway
   repo: a0925165493-eng/baxinji
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/71138b3d-e4e8-4d82-958c-017301d62f0d/pkce
+  auth_token_endpoint: /sites/71138b3d-e4e8-4d82-958c-017301d62f0d/token
+  gateway_url: https://gateway.decapbridge.com
   commit_messages:
-    update: "後台更新：{{slug}}"
-    uploadMedia: "上傳照片：{{path}}"
+    create: "後台新增：{{collection}} {{slug}}（{{author-name}}）"
+    update: "後台更新：{{collection}} {{slug}}（{{author-name}}）"
+    delete: "後台刪除：{{collection}} {{slug}}（{{author-name}}）"
+    uploadMedia: "上傳照片：{{path}}（{{author-name}}）"
+    deleteMedia: "刪除照片：{{path}}（{{author-name}}）"
+
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
 
 locale: zh_Hant
 site_url: https://baxinji.netlify.app
