@@ -66,7 +66,7 @@ const rest = {
   sameAs: [shop.facebook, shop.instagram, shop.tiktok, shop.youtube, shop.lineUrl].filter(Boolean),
 };
 const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
-const web = { '@context': 'https://schema.org', '@type': 'WebSite', name: shop.name, url: U, inLanguage: 'zh-Hant-TW' };
+const web = { '@context': 'https://schema.org', '@type': 'WebSite', name: shop.name + '官方網站', alternateName: ['八辛吉官網', shop.name], url: U, inLanguage: 'zh-Hant-TW' };
 const JSONLD = [rest, faqLd, web].map(o => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`).join('\n');
 
 // ---- 預先寫進網頁的文字（讓 Google 不用跑程式也看得到）----
