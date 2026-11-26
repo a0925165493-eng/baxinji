@@ -99,10 +99,10 @@ collections:
             widget: list
             summary: "{{fields.title}}"
             fields:
-              - { name: id, label: TikTok 影片編號, widget: string, hint: "影片網址最後那串數字，例如 https://www.tiktok.com/@98vip888/video/7243419373946326277 → 7243419373946326277" }
+              - { name: id, label: TikTok 影片連結, widget: string, hint: "在 TikTok 按「分享 → 複製連結」直接貼上就好（短網址 vt.tiktok.com 也可以）" }
               - { name: title, label: 標題, widget: string }
               - { name: desc, label: 一句話說明, widget: string, required: false }
-              - { name: cover, label: 封面圖, widget: image, required: false, choose_url: false }
+              - { name: cover, label: 封面圖（直式照片，建議 1MB 以下）, widget: image, required: false, choose_url: false }
 
       - name: shop
         label: 🏠 店家資料

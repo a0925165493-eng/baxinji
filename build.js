@@ -17,7 +17,19 @@ const H = {}; DAYKEYS.forEach((k, i) => { const v = norm(hours[k]); H[i] = (!v |
 const SHOP = { ...shop, hours: H, points: (shop.points || []).filter(Boolean) };
 const card = x => ({ tag: x.tag || '', name: x.name, desc: x.desc || '', price: String(x.price || ''), spice: x.spicy ? 1 : 0, img: img(x.img) });
 const SIGNATURE = (featured.signature || []).map(card), NOODLES = (featured.noodles || []).map(card);
-const VIDEOS = (videos.list || []).filter(v => v.id).map(v => ({ id: String(v.id).replace(/\D/g, ''), title: v.title || '', desc: v.desc || '', cover: img(v.cover), src: '', poster: '' }));
+const VIDEOS = (videos.list || []).filter(v => v.id).map(v => ({ id: String(v.id).trim(), title: v.title || '', desc: v.desc || '', cover: img(v.cover), src: '', poster: '' }));
+// TikTok 影片：可以填編號、完整網址或短網址（vt.tiktok.com），這裡自動換成影片編號
+async function tiktokId(raw) {
+  const m = raw.match(/video\/(\d{15,})/) || raw.match(/^(\d{15,})$/);
+  if (m) return m[1];
+  if (/^https?:\/\//.test(raw)) {
+    try { const r = await fetch(raw, { redirect: 'follow', headers: { 'user-agent': 'Mozilla/5.0' } }); const u = r.url + ' ' + (await r.text()).slice(0, 200000); const k = u.match(/video\/(\d{15,})/); if (k) return k[1]; } catch (e) { }
+  }
+  console.warn('⚠ 找不到 TikTok 影片編號，這支先不顯示：', raw); return '';
+}
+(async () => {
+for (const v of VIDEOS) v.id = await tiktokId(v.id);
+for (let i = VIDEOS.length - 1; i >= 0; i--) if (!VIDEOS[i].id) VIDEOS.splice(i, 1);
 const MENU = {}; (menu.categories || []).forEach(c => {
   MENU[c.name] = { ...(c.note ? { note: c.note } : {}), items: (c.items || []).map(i => ({ n: i.name, ...(i.detail ? { d: i.detail } : {}), p: String(i.price || ''), ...(i.spicy ? { hot: 1 } : {}) })) };
 });
@@ -81,3 +93,5 @@ const copy = (src, dst) => { if (!fs.existsSync(src)) return; if (fs.statSync(sr
 const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
 fs.writeFileSync(path.join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${U}</loc><lastmod>${today}</lastmod></url>\n</urlset>\n`);
 console.log('OK 網站已產生到 dist/');
+
+})().catch(e => { console.error(e); process.exit(1); });
