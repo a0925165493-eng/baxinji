@@ -404,7 +404,17 @@ footer ul{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:4px}
   .navbtns .btn{flex:1}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-.notice{background:#a3222a;color:#fff;text-align:center;padding:10px 16px;font-size:.95rem;line-height:1.5}.notice a{color:#fff;text-decoration:underline;margin-left:6px}
+.notice{background:linear-gradient(135deg,var(--red) 0%,var(--red-d) 100%);color:#fff;padding:34px 0;border-top:4px solid var(--gold-l);border-bottom:4px solid var(--gold-l)}
+.notice .wrap{display:flex;gap:22px;align-items:center}
+.notice .nic{flex:none;width:68px;height:68px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center;font-size:2rem;box-shadow:0 4px 14px #0004;animation:nring 2.4s ease-in-out infinite}
+.notice .nk{display:inline-block;background:var(--gold-l);color:var(--red-dd);font-weight:700;font-size:.85rem;letter-spacing:.15em;padding:3px 12px;border-radius:2px;margin-bottom:8px}
+.notice h2{color:#fff;font:700 clamp(1.5rem,3.6vw,2.2rem)/1.3 var(--serif);margin:0 0 6px}
+.notice p{margin:0;font-size:clamp(1.05rem,2.2vw,1.25rem);line-height:1.7;color:#fff3e6;white-space:pre-line}
+.notice .nbtn{display:inline-block;margin-top:14px;background:#fff;color:var(--red);font-weight:700;padding:10px 22px;border-radius:2px;text-decoration:none}
+.notice .nbtn:hover{background:var(--gold-l);color:var(--red-dd)}
+@keyframes nring{0%,100%{transform:rotate(0)}10%{transform:rotate(-12deg)}20%{transform:rotate(10deg)}30%{transform:rotate(-6deg)}40%{transform:rotate(0)}}
+@media (prefers-reduced-motion:reduce){.notice .nic{animation:none}}
+@media (max-width:620px){.notice{padding:26px 0}.notice .wrap{flex-direction:column;align-items:flex-start;gap:14px}.notice .nic{width:54px;height:54px;font-size:1.6rem}}
 </style>
 <style>
 .todo{display:inline-block;background:#fff3d6;color:#7a5200;border:1px dashed #e0b85e;padding:0 7px;border-radius:2px;font-size:.85em;line-height:1.7;font-weight:500;vertical-align:middle}
@@ -528,7 +538,6 @@ body{overflow-x:clip}
 {{JSONLD}}
 </head>
 <body>
-{{NOTICE}}
 
 
 <div class="topline"><div class="wrap"><span data-c="slogan" data-plain>手作麻辣鴨血、臭豆腐｜麻辣鍋湯底專賣店</span><span class="fontsize" aria-label="字級">字級 <button type="button" data-fs="normal" aria-pressed="true">標準</button><button type="button" data-fs="large" aria-pressed="false">放大</button></span></div></div>
@@ -562,7 +571,7 @@ body{overflow-x:clip}
     </div>
     
   </section>
-
+{{NOTICE}}
   <div class="infobar" aria-label="店家資訊"><div class="wrap">
     <a href="#visit"><span class="ic">🕒</span><span><b id="ibToday">今日營業時間</b><small id="ibStatus"></small></span></a>
     <a id="ibAddr" href="#visit" target="_blank" rel="noopener"><span class="ic">📍</span><span><b data-c="address" data-plain>臺南市永康區永明街45-1號</b><small>點我開啟地圖導航</small></span></a>

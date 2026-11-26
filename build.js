@@ -61,7 +61,7 @@ const JSONLD = [rest, faqLd, web].map(o => `<script type="application/ld+json">$
 const first = Object.values(MENU)[0] || { items: [] };
 const MENU_STATIC = first.items.map(i => `<div class="mitem"><span class="n">${esc(i.n)}${i.d ? ` <small class="hint">（${esc(i.d)}）</small>` : ''}</span><span class="dots"></span><span class="p">${i.p ? '$' + esc(i.p) : ''}</span></div>`).join('');
 const FAQ_STATIC = FAQ.map(([q, a]) => `<details class="faq"><summary>${esc(q)}</summary><div>${esc(a)}</div></details>`).join('');
-const NOTICE = notice.show && notice.text ? `<div class="notice" role="status">📢 ${esc(notice.text)}${notice.link ? `<a href="${esc(notice.link)}" target="_blank" rel="noopener">看詳情</a>` : ''}</div>` : '';
+const NOTICE = notice.show && (notice.title || notice.text) ? `<section class="notice" id="notice" role="status" aria-label="店家公告"><div class="wrap"><div class="nic" aria-hidden="true">📢</div><div><span class="nk">店家公告</span>${notice.title ? `<h2>${esc(notice.title)}</h2>` : ''}${notice.text ? `<p>${esc(notice.text)}</p>` : ''}${notice.link ? `<a class="nbtn" href="${esc(notice.link)}" target="_blank" rel="noopener">看詳情 →</a>` : ''}</div></div></section>` : '';
 const up = String(menu.updated || '').slice(0, 10).replace(/-/g, '/');
 
 let html = fs.readFileSync(path.join(__dirname, 'src', 'template.html'), 'utf8');

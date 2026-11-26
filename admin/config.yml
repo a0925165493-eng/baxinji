@@ -25,8 +25,9 @@ collections:
         label: 📢 公告（臨時休息、活動）
         file: data/notice.json
         fields:
-          - { name: show, label: 顯示公告, widget: boolean, default: false, hint: 打開才會出現在網站最上方的紅色橫條 }
-          - { name: text, label: 公告內容, widget: string, required: false, hint: "例如：12/31 跨年夜營業到 20:00" }
+          - { name: show, label: 顯示公告, widget: boolean, default: false, hint: 打開才會出現在首頁大圖下方的紅色公告區；不需要時關掉即可 }
+          - { name: title, label: 公告標題（大字）, widget: string, required: false, hint: "例如：12/31 跨年夜提早打烊" }
+          - { name: text, label: 公告內容, widget: text, required: false, hint: "例如：當天營業到 20:00，1/1 照常營業。可以換行。" }
           - { name: link, label: 詳情連結（可不填）, widget: string, required: false, hint: 例如 FB 貼文網址 }
 
       - name: hours
