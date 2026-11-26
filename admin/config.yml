@@ -106,15 +106,18 @@ collections:
         file: data/videos.json
         fields:
           - name: list
-            label: 影片（由上到下依序顯示）
+            label: 影片（由上到下依序顯示，按住左邊 ⋮⋮ 拖曳就能調整順序）
             label_singular: 影片
             widget: list
+            collapsed: true
             summary: "{{fields.title}}"
+            hint: "清單預設收合成一行一支，按住每列左邊的 ⋮⋮ 上下拖曳就能換順序；點標題可展開修改。手機拖不動的話，用下面每支影片的「排序」填數字也可以。"
             fields:
               - { name: id, label: 影片連結（TikTok 或 YouTube）, widget: string, hint: "TikTok 或 YouTube 按「分享 → 複製連結」直接貼上就好。TikTok 建議貼完整網址（tiktok.com/@帳號/video/數字），短網址也能用，但只能點開到 TikTok 看。YouTube 沒放封面會自動抓影片縮圖" }
               - { name: title, label: 標題, widget: string }
               - { name: desc, label: 一句話說明, widget: string, required: false }
               - { name: cover, label: 封面圖（直式照片，建議 1MB 以下）, widget: image, required: false, choose_url: false }
+              - { name: order, label: 排序（選填）, widget: number, value_type: int, required: false, hint: "填 1、2、3⋯數字小的排前面；不填就照清單順序排在後面" }
 
       - name: shop
         label: 🏠 店家資料

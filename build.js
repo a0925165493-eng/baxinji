@@ -18,7 +18,11 @@ const H = {}; DAYKEYS.forEach((k, i) => { const v = norm(hours[k]); H[i] = (!v |
 const SHOP = { ...shop, hours: H, points: (shop.points || []).filter(Boolean) };
 const card = x => ({ tag: x.tag || '', name: x.name, desc: x.desc || '', price: String(x.price || ''), spice: x.spicy ? 1 : 0, img: img(x.img) });
 const SIGNATURE = (featured.signature || []).map(card), NOODLES = (featured.noodles || []).map(card);
-const VIDEOS = (videos.list || []).filter(v => v.id).map(v => ({ id: String(v.id).trim(), title: v.title || '', desc: v.desc || '', cover: img(v.cover), src: '', poster: '' }));
+// 有填「排序」的照數字排在前面，沒填的照後台清單順序排在後面
+const VIDEOS = (videos.list || []).filter(v => v.id)
+  .map((v, i) => ({ v, i, o: Number.isFinite(+v.order) && String(v.order ?? '').trim() !== '' ? +v.order : Infinity }))
+  .sort((a, b) => a.o - b.o || a.i - b.i)
+  .map(({ v }) => ({ id: String(v.id).trim(), title: v.title || '', desc: v.desc || '', cover: img(v.cover), src: '', poster: '' }));
 // 影片連結：支援 TikTok（編號、完整網址、短網址 vt.tiktok.com）和 YouTube（Shorts、一般影片、youtu.be）
 function youtubeId(raw) {
   const m = raw.match(/(?:youtube\.com\/(?:shorts\/|embed\/|live\/|watch\?(?:.*&)?v=)|youtu\.be\/)([\w-]{11})/);
