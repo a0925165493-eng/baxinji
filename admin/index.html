@@ -7,16 +7,13 @@
 <title>八辛吉官網後台</title>
 </head>
 <body>
-<a id="goHome" href="/" target="_blank" rel="noopener" title="在新分頁打開官網首頁">🏠 回官網首頁</a>
-<style>
-#goHome{position:fixed;left:16px;bottom:16px;z-index:99999;background:#8b1a1f;color:#fff;font:700 15px/1 "Noto Sans TC","Microsoft JhengHei",sans-serif;padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px #0004}
-#goHome:hover{background:#5e0c10}
-</style>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 <style>
 .bx-login{display:inline-flex!important;align-items:center;gap:10px;background:#fff!important;color:#3c4043!important;border:1px solid #dadce0!important;border-radius:999px!important;padding:12px 26px!important;font:600 16px/1 "Noto Sans TC","Microsoft JhengHei",sans-serif!important;box-shadow:0 2px 8px #0002!important;height:auto!important;cursor:pointer}
 .bx-login:hover{background:#f7f8f8!important}
 .bx-login svg.g{width:20px;height:20px}
+a.bx-home{display:inline-flex!important;align-items:center;gap:6px;background:#8b1a1f!important;color:#fff!important;font:700 15px/1 "Noto Sans TC","Microsoft JhengHei",sans-serif!important;padding:10px 16px!important;border-radius:999px!important;text-decoration:none!important;white-space:nowrap}
+a.bx-home:hover{background:#5e0c10!important}
 </style>
 <script>
 /* 後台登入：把預設的「連結圖示＋登入」換成「Google 登入」按鈕，並在打開後台時自動前往登入 */
@@ -25,6 +22,8 @@
   var KEY='bx_auto_login', autoDone=!!sessionStorage.getItem(KEY);
   new MutationObserver(function(){
     var b=[].slice.call(document.querySelectorAll('button')).find(function(x){return !x.classList.contains('bx-login')&&/^(登入|Login|Login with Netlify Identity)$/i.test((x.textContent||'').trim());});
+    var h=[].slice.call(document.querySelectorAll('a[class*="AppHeaderSiteLink"]')).find(function(a){return !a.classList.contains('bx-home');});
+    if(h){h.classList.add('bx-home');h.textContent='🏠 回到前台';h.href='/';h.title='在新分頁打開官網首頁';}
     if(!b) return;
     b.classList.add('bx-login'); b.innerHTML=G+'<span>使用 Google 登入</span>';
     if(!autoDone){autoDone=true;sessionStorage.setItem(KEY,'1');setTimeout(function(){b.click();},300);}
