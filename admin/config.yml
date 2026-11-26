@@ -102,7 +102,7 @@ collections:
             fields: *card
 
       - name: videos
-        label: 🎬 TikTok 影片
+        label: 🎬 影片（TikTok／YouTube）
         file: data/videos.json
         fields:
           - name: list
@@ -111,7 +111,7 @@ collections:
             widget: list
             summary: "{{fields.title}}"
             fields:
-              - { name: id, label: TikTok 影片連結, widget: string, hint: "在 TikTok 按「分享 → 複製連結」直接貼上就好（短網址 vt.tiktok.com 也可以）" }
+              - { name: id, label: 影片連結（TikTok 或 YouTube）, widget: string, hint: "TikTok 或 YouTube 按「分享 → 複製連結」直接貼上就好。TikTok 建議貼完整網址（tiktok.com/@帳號/video/數字），短網址也能用，但只能點開到 TikTok 看。YouTube 沒放封面會自動抓影片縮圖" }
               - { name: title, label: 標題, widget: string }
               - { name: desc, label: 一句話說明, widget: string, required: false }
               - { name: cover, label: 封面圖（直式照片，建議 1MB 以下）, widget: image, required: false, choose_url: false }
