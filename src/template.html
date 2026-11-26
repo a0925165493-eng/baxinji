@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#5e0c10">
+<meta name="description" content="台南永康八辛吉手作麻辣燙，八種辛香料熬製手作麻辣湯頭，招牌鴨血、臭豆腐、讚岐烏龍麵。提供多種辣度與不辣選擇，歡迎內用、外帶及外送。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="八辛吉手作麻辣燙">
+<meta property="og:title" content="八辛吉手作麻辣燙｜台南永康人氣麻辣鴨血、臭豆腐">
+<meta property="og:description" content="台南永康八辛吉手作麻辣燙，八種辛香料熬製手作麻辣湯頭，招牌鴨血、臭豆腐、讚岐烏龍麵。提供多種辣度與不辣選擇，歡迎內用、外帶及外送。">
+<meta property="og:url" content="https://baxinji.netlify.app/">
+<meta property="og:image" content="https://baxinji.netlify.app/og-image.jpg">
+<meta property="og:image:secure_url" content="https://baxinji.netlify.app/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="八辛吉手作麻辣燙 品牌主視覺">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="google-site-verification" content="7m5HVyMuBzlubG8yZZvEK7xKbWg73D_hU3siSaTwoCs">
+<link rel="preload" as="image" href="img/hero.jpg">
+<meta name="geo.region" content="TW-TNN">
+<meta name="geo.placename" content="臺南市永康區">
+<meta name="geo.position" content="23.0257796;120.2596072">
+<link rel="canonical" href="https://baxinji.netlify.app/">
+<link rel="icon" href="img/logo.png">
+<title>八辛吉手作麻辣燙｜台南永康麻辣燙・麻辣鴨血・臭豆腐</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#8b1a1f;--red-d:#5e0c10;--red-dd:#3a0709;--gold:#b8862a;--gold-l:#e2b34e;
+  --ink:#2a2420;--muted:#6b6156;--paper:#fffcf7;--cream:#f6efe4;--line:#e6dccd;--ok:#2f6b3a;--warn:#9a5b0f;
+  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --lattice:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23e3c994' stroke-opacity='.22' stroke-width='1.2'%3E%3Crect x='4' y='4' width='48' height='48'/%3E%3Cpath d='M28 4L52 28L28 52L4 28Z'/%3E%3Crect x='20' y='20' width='16' height='16'/%3E%3C/g%3E%3C/svg%3E");
+  --lattice-red:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%238b1a1f' stroke-opacity='.09' stroke-width='1.2'%3E%3Crect x='4' y='4' width='48' height='48'/%3E%3Cpath d='M28 4L52 28L28 52L4 28Z'/%3E%3Crect x='20' y='20' width='16' height='16'/%3E%3C/g%3E%3C/svg%3E");
+}
+html{font-size:100%;scroll-behavior:smooth}
+html.large{font-size:112.5%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.85;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit}
+img{max-width:100%}
+.wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* demo ribbon */
+.demo-bar{background:#3a2a10;color:#f6e7c4;font-size:.8125rem;line-height:1.5}
+.demo-bar .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:7px 0;flex-wrap:wrap}
+.demo-bar b{background:#f0c75e;color:#3a2a10;padding:1px 8px;border-radius:2px;margin-right:8px;font-weight:700}
+.demo-bar a{color:#f0c75e}
+.topline{background:var(--red-dd);color:#eddfca;font-size:.8125rem;letter-spacing:.1em}
+.topline .wrap{display:flex;justify-content:space-between;align-items:center;min-height:34px}
+.fontsize{display:flex;gap:4px;align-items:center}
+.fontsize button{background:transparent;border:1px solid #eddfca55;color:#eddfca;padding:0 9px;cursor:pointer;line-height:24px;border-radius:2px}
+.fontsize button[aria-pressed=true]{background:#eddfca;color:var(--red-dd)}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:#fffcf7f0;backdrop-filter:blur(8px);border-bottom:1px solid #b48a4a40}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:78px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.seal{width:46px;height:46px;display:grid;place-items:center;border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:3px;color:var(--red);font:700 1.05rem/1.05 var(--serif);text-align:center;flex:none}
+.brand b{display:block;font:700 1.15rem/1.3 var(--serif);letter-spacing:.12em}
+.brand small{display:block;font-size:.625rem;letter-spacing:.16em;color:#8b7d6e;line-height:1.4}
+.menu{display:flex;align-items:center;gap:4px}
+.menu a{text-decoration:none;font-size:.9375rem;padding:8px 11px;border-bottom:2px solid transparent}
+.menu a:hover,.menu a[aria-current=page]{color:var(--red);border-bottom-color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 20px;border:1px solid var(--red);background:var(--red);color:#fff;text-decoration:none;font-size:1rem;cursor:pointer;border-radius:2px;line-height:1.3;text-align:center}
+.btn:hover{background:var(--red-d);border-color:var(--red-d)}
+.btn.ghost{background:transparent;color:var(--red)}
+.btn.ghost:hover{background:#b5362a10}
+.btn.light{background:transparent;border-color:#ffffffb0;color:#fff}
+.btn.light:hover{background:#ffffff1a}
+.btn.line{background:#06c755;border-color:#06c755;color:#fff}
+.btn.line:hover{background:#05a948;border-color:#05a948}
+.btn.sm{min-height:40px;padding:6px 14px;font-size:.9rem}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.burger{display:none;width:48px;height:48px;border:1px solid var(--line);background:#fff;cursor:pointer;border-radius:2px}
+.burger span{display:block;width:20px;height:2px;background:var(--ink);margin:4px auto}
+.drawer{display:none}
+
+/* pages */
+.page{display:none}
+.page.active{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+section{padding:80px 0}
+.kicker{color:var(--gold);font-size:.75rem;letter-spacing:.26em;font-weight:500}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:.06em;line-height:1.45}
+h2{font-size:clamp(1.6rem,3.2vw,2.1rem);margin:6px 0 0}
+h3{font-size:1.3rem;margin:0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.more{color:var(--red);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px;font-size:.95rem}
+.lead{color:var(--muted);max-width:720px}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;line-height:1.5;padding:2px 9px;border-radius:20px;border:1px solid currentColor;font-weight:500;white-space:nowrap}
+.chip.open{color:var(--ok)}.chip.soon{color:var(--warn)}.chip.ended{color:#8a8178}.chip.full{color:var(--red)}.chip.tbd{color:#7b6a4b}
+.chip.sample{color:#8a5a00;background:#fff3d6;border-color:#f0d48f}
+.pending{display:inline-block;background:#fff3d6;color:#7a5200;border:1px dashed #e0b85e;padding:0 7px;border-radius:2px;font-size:.88em}
+.note{background:#fbf6ec;border-left:3px solid var(--gold);padding:14px 18px;color:#5b5247;font-size:.95rem}
+.note.warn{background:#fff6e5;border-left-color:#e0a030}
+.note.red{background:#fdf0ec;border-left-color:var(--red)}
+.page-hero{background:linear-gradient(90deg,#2a1c17,#4b2b22cc),var(--lattice),#2a1c17;color:#fff;padding:64px 0 54px}
+.page-hero h1{font-size:clamp(1.9rem,4vw,2.6rem);margin:8px 0 6px}
+.page-hero p{color:#efe5da;margin:0;max-width:640px}
+.crumb{font-size:.85rem;color:#dcc9ad}
+.crumb a{color:#dcc9ad}
+
+/* home hero */
+.hero{position:relative;min-height:600px;display:flex;align-items:center;color:#fff;overflow:hidden;background:#2a1c17}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,#1f1612f2 0%,#3a221bd9 45%,#7d261f80 100%),var(--lattice);}
+.hero-art{position:absolute;right:-40px;bottom:0;width:min(720px,64vw);opacity:.95;pointer-events:none}
+.hero .wrap{position:relative;padding:80px 0}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.4rem);line-height:1.35;letter-spacing:.1em;margin:18px 0 18px}
+.hero p{max-width:480px;color:#f3e9de;font-size:1.06rem;margin:0}
+.hero .eyebrow{color:var(--gold-l);letter-spacing:.3em;font-size:.85rem}
+.hero .btns{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.photo-tag{position:absolute;right:16px;bottom:12px;font-size:.72rem;color:#ffffffa0;letter-spacing:.06em}
+
+.quick{background:var(--cream);border-bottom:1px solid var(--line)}
+.quick .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.quick a{display:block;text-decoration:none;padding:20px 20px;border-left:1px solid var(--line)}
+.quick a:last-child{border-right:1px solid var(--line)}
+.quick a:hover{background:#fff}
+.quick b{display:block;font-weight:500;font-size:1.02rem}
+.quick span{font-size:.84rem;color:var(--muted)}
+
+/* media banner */
+.media{background:var(--cream);background-image:var(--lattice-red)}
+.media-main{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);background:#fff;border:1px solid var(--line);box-shadow:0 16px 40px #392b1b14}
+.media-main.vertical{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+.stage{position:relative;background:#1d1512;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:340px}
+.stage .frame{position:relative;width:100%;aspect-ratio:16/9;max-height:620px}
+.vertical .stage .frame{aspect-ratio:9/16;width:auto;height:min(620px,78vh);max-width:100%}
+.stage .backdrop{position:absolute;inset:-20px;background-size:cover;background-position:center;filter:blur(18px) brightness(.55);transform:scale(1.1)}
+.stage img.cover{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(0deg,#140e0bb8,transparent 55%);border:0;cursor:pointer;width:100%;color:#fff}
+.play .circle{width:84px;height:84px;border-radius:50%;border:1.5px solid #fff;background:#ffffff26;display:grid;place-items:center;font-size:1.6rem;padding-left:6px;transition:transform .2s}
+.play:hover .circle{transform:scale(1.06);background:#ffffff3a}
+.play .cap{position:absolute;left:24px;right:24px;bottom:20px;text-align:left;font-size:.85rem;color:#f1e8dc}
+.fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;background:#140e0bcc;color:#fff}
+.fallback p{margin:0;max-width:380px;font-size:.95rem}
+.plat{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;letter-spacing:.08em;padding:3px 10px;background:#ffffff1f;border:1px solid #ffffff55;border-radius:20px;color:#fff}
+.media-copy{padding:38px 38px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.media-copy h3{font-size:1.55rem;margin:10px 0 6px}
+.meta-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 10px;font-size:.92rem;color:var(--muted)}
+.media-copy p{color:var(--muted);margin:0 0 14px}
+.media-copy .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:10px}
+.mode-toggle{display:flex;gap:0;border:1px solid var(--line);margin:6px 0 10px}
+.mode-toggle button{border:0;background:#fff;padding:6px 12px;cursor:pointer;font-size:.85rem}
+.mode-toggle button[aria-pressed=true]{background:var(--ink);color:#fff}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:18px}
+.vcard{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);padding:10px;cursor:pointer;text-align:left}
+.vcard[aria-pressed=true]{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
+.vcard .thumb{flex:none;width:64px;height:64px;background-size:cover;background-position:center;position:relative}
+.vcard .thumb.v{width:42px;height:74px}
+.vcard b{display:block;font-size:.95rem;line-height:1.45;font-weight:500}
+.vcard small{color:var(--muted);font-size:.78rem}
+
+/* events */
+.evgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px}
+.ev{border:1px solid var(--line);background:#fff;padding:24px;display:flex;flex-direction:column;gap:6px;min-height:220px}
+.ev.primary{background:var(--red-d);background-image:var(--lattice);color:#fff;border-color:var(--red-d)}
+.ev .date{font-size:.85rem;color:var(--gold);letter-spacing:.06em}
+.ev.primary .date{color:var(--gold-l)}
+.ev h3{font-size:1.2rem;margin:6px 0}
+.ev p{margin:0;font-size:.93rem;color:var(--muted)}
+.ev.primary p{color:#f1e2dd}
+.ev .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
+.ev.primary .chip{color:#fff}
+.ev.primary .chip.sample{color:#8a5a00}
+.ev.ended{opacity:.75}
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:24px;flex-wrap:wrap}
+.tabs button{border:0;background:transparent;padding:10px 16px;cursor:pointer;border-bottom:3px solid transparent;font-size:1rem}
+.tabs button[aria-selected=true]{border-bottom-color:var(--red);color:var(--red);font-weight:500}
+.list{display:grid;gap:12px}
+.row{display:grid;grid-template-columns:150px 1fr auto;gap:18px;align-items:center;border:1px solid var(--line);background:#fff;padding:18px 22px}
+.row .d{font-family:var(--serif);color:var(--red);font-size:1.05rem}
+.row .d small{display:block;color:var(--muted);font-family:var(--sans);font-size:.78rem}
+.row h3{font-size:1.1rem}
+.row p{margin:2px 0 0;color:var(--muted);font-size:.92rem}
+
+/* story */
+.story{background:var(--cream)}
+.storygrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ph{position:relative;aspect-ratio:4/3;background:linear-gradient(160deg,#5a3226,#2a1c17);background-image:var(--lattice),linear-gradient(160deg,#6b3a2b,#2a1c17);display:flex;align-items:flex-end;justify-content:flex-start;overflow:hidden}
+.ph svg{position:absolute;inset:auto 0 0 0;width:100%}
+.ph span{position:relative;margin:12px;font-size:.75rem;color:#ffffffc0;background:#00000040;padding:2px 8px}
+.fact{border-left:2px solid var(--gold);padding:6px 0 6px 18px;margin:22px 0}
+.fact b{font:700 1.6rem var(--serif);color:var(--red);margin-right:10px}
+
+/* services */
+.svcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{border:1px solid var(--line);background:#fff;padding:28px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.svc:after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;background:var(--lattice-red);opacity:1}
+.svc .tag{font-size:.8rem;color:var(--gold);letter-spacing:.14em}
+.svc h3{font-size:1.55rem;margin:8px 0}
+.svc p{color:var(--muted);font-size:.96rem;margin:0 0 14px}
+.svc dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.9rem;margin:0 0 20px}
+.svc dt{color:var(--muted)}
+.svc dd{margin:0}
+.svc .btn{margin-top:auto}
+.flowline{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:26px;background:var(--cream);padding:18px 22px;font-size:.95rem}
+.flowline b{color:var(--red);margin-right:6px}
+.flowline span.s{background:#fff;border:1px solid var(--line);padding:2px 10px}
+
+/* LINE band */
+.lineband{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.linegrid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.qr{width:180px;height:180px;border:1.5px dashed #c9b893;background:#f7f3ec;display:grid;place-items:center;text-align:center;color:#796c58;font-size:.85rem;padding:12px;flex:none}
+
+/* visit */
+.visit{background:#28211d;color:#fff;padding:0}
+.visitgrid{display:grid;grid-template-columns:1fr 1fr}
+.visitinfo{padding:72px 50px 72px max(24px,calc((100vw - 1160px)/2))}
+.visitinfo dl{display:grid;grid-template-columns:90px 1fr;gap:10px 14px;margin:22px 0 28px}
+.visitinfo dt{color:#d6b47a}
+.visitinfo dd{margin:0;color:#efe6dc}
+.visitinfo a{color:#fff}
+.map{min-height:420px;background:#cfc3b0;background-image:linear-gradient(0deg,#00000010 1px,transparent 1px),linear-gradient(90deg,#00000010 1px,transparent 1px);background-size:40px 40px;display:grid;place-items:center;text-decoration:none;color:var(--ink);position:relative}
+.map.photo{background:#1a0d0b;overflow:hidden;align-items:end}
+.map.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.map.photo .pin{position:relative;margin-bottom:24px}
+.map .pin{background:#fff;padding:20px 26px;text-align:center;box-shadow:0 8px 28px #33281b33}
+.map .pin b{display:block;color:var(--red);font:700 1.15rem var(--serif)}
+
+/* generic content */
+.prose{max-width:780px}
+.prose h3{margin:30px 0 8px;color:var(--red-d)}
+.prose p,.prose li{color:#4d453c}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.box{border:1px solid var(--line);background:#fff;padding:26px}
+.box h3{margin-bottom:8px}
+table{width:100%;border-collapse:collapse;font-size:.93rem;background:#fff}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:var(--cream);font-weight:500}
+.tablewrap{overflow-x:auto}
+details.faq{border:1px solid var(--line);background:#fff;margin-bottom:10px}
+details.faq summary{cursor:pointer;padding:16px 20px;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.faq summary:after{content:"＋";color:var(--red)}
+details.faq[open] summary:after{content:"－"}
+details.faq div{padding:0 20px 18px;color:var(--muted)}
+
+/* apply */
+.apply{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:34px;align-items:start}
+.stepper{display:flex;gap:0;margin:0 0 28px;padding:0;list-style:none;counter-reset:s;overflow-x:auto}
+.stepper li{flex:1;min-width:84px;text-align:center;font-size:.82rem;color:#9a9086;position:relative;padding-top:38px}
+.stepper li:before{counter-increment:s;content:counter(s);position:absolute;top:0;left:50%;transform:translateX(-50%);width:30px;height:30px;border-radius:50%;border:1.5px solid #cfc4b4;background:#fff;display:grid;place-items:center;font-weight:700;color:#9a9086;z-index:1}
+.stepper li:after{content:"";position:absolute;top:15px;left:-50%;width:100%;height:1.5px;background:#ddd2c2}
+.stepper li:first-child:after{display:none}
+.stepper li.done:before{background:var(--gold);border-color:var(--gold);color:#fff;content:"✓"}
+.stepper li.cur{color:var(--red);font-weight:700}
+.stepper li.cur:before{background:var(--red);border-color:var(--red);color:#fff}
+.panel{border:1px solid var(--line);background:#fff;padding:30px}
+.panel h3{font-size:1.35rem;margin-bottom:6px}
+.choice{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 22px}
+.choice label{border:1.5px solid var(--line);padding:16px;cursor:pointer;display:block;background:#fff}
+.choice input{position:absolute;opacity:0}
+.choice label:has(input:checked){border-color:var(--red);background:#fdf3ef}
+.choice label b{display:block;font:700 1.2rem var(--serif)}
+.choice label small{color:var(--muted)}
+.field{margin-bottom:18px}
+.field>label,.field>.lbl{display:block;font-weight:500;margin-bottom:6px}
+.req{color:var(--red);font-size:.8rem;margin-left:6px;font-weight:500}
+.opt{color:var(--muted);font-size:.8rem;margin-left:6px;font-weight:400}
+.hint{font-size:.85rem;color:var(--muted);margin-top:4px}
+.err{font-size:.88rem;color:#b3261e;margin-top:4px;display:none}
+.field.invalid .err{display:block}
+.field.invalid input,.field.invalid select{border-color:#b3261e;background:#fff8f7}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;min-height:50px;padding:10px 14px;border:1px solid #d3c7b5;background:#fff;font:1rem var(--sans);border-radius:2px}
+textarea{min-height:100px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.bene{border:1px dashed #d3c7b5;padding:18px 18px 4px;margin-bottom:14px;background:#fffdf9}
+.bene h4{margin:0 0 12px;font:700 1.05rem var(--serif);color:var(--red-d)}
+.check{display:flex;gap:10px;align-items:flex-start;margin:10px 0;cursor:pointer}
+.check input{width:22px;height:22px;flex:none;margin-top:3px;accent-color:var(--red)}
+.radios{display:flex;flex-wrap:wrap;gap:10px}
+.radios label{display:flex;gap:8px;align-items:center;border:1.5px solid var(--line);padding:10px 16px;cursor:pointer;min-height:48px}
+.radios label:has(input:checked){border-color:var(--red);background:#fdf3ef}
+.radios input{accent-color:var(--red);width:18px;height:18px}
+.navbtns{display:flex;justify-content:space-between;gap:12px;margin-top:26px;flex-wrap:wrap}
+.summary{position:sticky;top:110px;border:1px solid var(--line);background:var(--cream);padding:22px}
+.summary h4{margin:0 0 10px;font:700 1.05rem var(--serif)}
+.summary dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0;font-size:.92rem}
+.summary dt{color:var(--muted)}
+.summary dd{margin:0;text-align:right}
+.total{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
+.sumtable td:first-child{color:var(--muted);width:34%}
+.privacy-sum{border:1px solid var(--line);background:#fbf8f3;padding:18px 20px;margin:20px 0}
+.privacy-sum dl{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;font-size:.9rem;margin:10px 0}
+.privacy-sum dt{font-weight:500}
+.privacy-sum dd{margin:0;color:var(--muted)}
+.textbtn{border:0;background:none;padding:0;color:var(--red);text-decoration:underline;cursor:pointer}
+
+/* gateway mock */
+.gateway{border:2px solid #3b6fb6;background:#f4f8fd;padding:0;margin-top:8px}
+.gateway .gw-top{background:#3b6fb6;color:#fff;padding:10px 18px;display:flex;justify-content:space-between;font-size:.9rem;flex-wrap:wrap;gap:6px}
+.gateway .gw-body{padding:22px}
+.gw-test{background:#ffe08a;color:#5a3d00;font-weight:700;text-align:center;padding:6px;font-size:.88rem;letter-spacing:.05em}
+.gw-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:16px}
+.gw-actions button{min-height:48px;border:1px solid #9db4d6;background:#fff;cursor:pointer;padding:8px 10px}
+.gw-actions button:hover{background:#e6eef9}
+.log{font-family:ui-monospace,Menlo,monospace;font-size:.8rem;background:#1f1b18;color:#d9cfbf;padding:14px 16px;margin-top:16px;white-space:pre-wrap;line-height:1.7;max-height:260px;overflow:auto}
+.result{text-align:center;padding:12px 0}
+.result .icon{width:72px;height:72px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;font-size:2rem;color:#fff}
+.result.ok .icon{background:var(--ok)}.result.bad .icon{background:#b3261e}.result.wait .icon{background:var(--warn)}
+.orderno{font:700 1.4rem ui-monospace,Menlo,monospace;letter-spacing:.06em;color:var(--red-d)}
+.status{display:inline-block;padding:2px 10px;border-radius:2px;font-weight:500;font-size:.9rem}
+.st-paid{background:#e4f1e6;color:var(--ok)}.st-pending{background:#fff1d6;color:var(--warn)}.st-failed,.st-expired,.st-cancelled{background:#fbe6e3;color:#a1261c}.st-created{background:#eee;color:#555}
+.spinner{width:34px;height:34px;border:3px solid #ddd;border-top-color:var(--red);border-radius:50%;animation:spin 1s linear infinite;margin:10px auto}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* footer */
+footer{background:#1f1a17;color:#bdb1a1;font-size:.9rem;padding:54px 0 28px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer b{color:#fff;font-weight:500}
+footer a,footer button.lnk{color:#e3d6c4;text-decoration:none;background:none;border:0;padding:0;cursor:pointer;font:inherit}
+footer a:hover,footer button.lnk:hover{text-decoration:underline}
+footer ul{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:4px}
+.copy{border-top:1px solid #ffffff1a;margin-top:34px;padding-top:18px;font-size:.8rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* float & modals */
+.line-float{position:fixed;right:20px;bottom:22px;z-index:35;border:0;border-radius:30px;background:#06c755;color:#fff;padding:12px 18px;box-shadow:0 6px 22px #12351e4d;display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:700}
+.modal{position:fixed;inset:0;z-index:60;background:#1c1714b3;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.open{display:flex}
+.dialog{background:var(--paper);width:min(520px,100%);max-height:90vh;overflow:auto;padding:30px;position:relative;box-shadow:0 20px 60px #21191350}
+.dialog h2{font-size:1.45rem;margin-bottom:8px}
+.dialog p{color:var(--muted)}
+.close{position:absolute;right:12px;top:8px;border:0;background:none;font-size:1.8rem;cursor:pointer;color:var(--muted);width:44px;height:44px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#2a2420;color:#fff;padding:12px 20px;z-index:70;border-radius:3px;display:none;font-size:.95rem;max-width:90vw}
+.toast.show{display:block}
+
+/* project page */
+.sitemap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sitemap .node{border:1px solid var(--line);background:#fff;padding:14px 16px}
+.sitemap .node b{display:block;color:var(--red-d);font-family:var(--serif)}
+.sitemap .node small{color:var(--muted);display:block;line-height:1.6}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 18px}
+.flow span{background:#fff;border:1px solid var(--line);padding:4px 10px;font-size:.88rem}
+.flow i{color:var(--gold);font-style:normal}
+.cl td:last-child{white-space:nowrap}
+
+/* admin */
+.adm-bar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);padding:14px 18px;margin-bottom:18px}
+.adm-bar select{width:auto;min-height:44px}
+.adm-grid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:24px;align-items:start}
+.adm-grid .panel{position:sticky;top:110px}
+.adm table td,.adm table th{font-size:.88rem}
+.adm .rowbtn{border:1px solid var(--line);background:#fff;padding:4px 10px;cursor:pointer;margin:2px;min-height:34px}
+.adm .rowbtn:hover{border-color:var(--red);color:var(--red)}
+.adm .tabs button[disabled]{opacity:.4;cursor:not-allowed}
+.denied{border:1px dashed #d3c7b5;background:#fbf8f3;padding:40px;text-align:center;color:var(--muted)}
+.ro{font-size:.8rem;background:#eee;color:#555;padding:1px 8px;border-radius:2px;margin-left:8px}
+.devices{display:flex;gap:28px;align-items:flex-start;overflow-x:auto;padding:10px 0 20px}
+.dev{flex:none}
+.dev .scr{border:10px solid #2a2420;border-radius:14px;overflow:hidden;background:#fff;position:relative}
+.dev iframe{border:0;transform-origin:0 0;display:block}
+.dev small{display:block;text-align:center;color:var(--muted);margin-top:6px}
+@media (max-width:980px){.adm-grid{grid-template-columns:1fr}.adm-grid .panel{position:static}}
+@media (max-width:980px){
+  .menu{display:none}
+  .burger{display:block}
+  .drawer.open{display:block;position:fixed;inset:0;z-index:50;background:#1c1714b3}
+  .drawer .in{background:var(--paper);width:min(340px,88vw);height:100%;margin-left:auto;padding:22px;overflow:auto}
+  .drawer a{display:block;padding:14px 6px;border-bottom:1px solid var(--line);text-decoration:none;font-size:1.08rem}
+  .media-main,.media-main.vertical{grid-template-columns:1fr}
+  .evgrid{grid-template-columns:1fr 1fr}.ev.primary{grid-column:span 2}
+  .storygrid,.linegrid,.two{grid-template-columns:1fr;gap:30px}
+  .svcgrid{grid-template-columns:1fr 1fr}
+  .apply{grid-template-columns:1fr}
+  .summary{position:static}
+  .sitemap{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  body{font-size:1.03rem}
+  .wrap{width:calc(100% - 32px)}
+  .nav{min-height:68px}
+  .brand b{font-size:1rem}.brand small{font-size:.55rem}
+  .seal{width:40px;height:40px;font-size:.92rem}
+  .topline .tl-right{display:none}
+  .hero{min-height:540px}
+  .hero-art{width:110vw;right:-30vw;opacity:.5}
+  .hero .btns .btn{width:100%}
+  .quick .wrap{grid-template-columns:1fr 1fr}
+  .quick a{border-bottom:1px solid var(--line);padding:16px 14px}
+  section{padding:58px 0}
+  .media-copy{padding:24px}
+  .vertical .stage .frame{height:min(560px,72vh)}
+  .evgrid,.svcgrid,.choice,.grid2,.sitemap,.foot{grid-template-columns:1fr}
+  .ev.primary{grid-column:auto}
+  .row{grid-template-columns:1fr;gap:6px}
+  .visitgrid{grid-template-columns:1fr}
+  .visitinfo{padding:56px 22px}
+  .map{min-height:280px}
+  .panel{padding:22px 18px}
+  .privacy-sum dl{grid-template-columns:1fr}
+  .line-float{right:12px;bottom:14px;padding:0;width:54px;height:54px;justify-content:center;font-size:.78rem;border-radius:50%;opacity:.95}
+  footer{padding-bottom:90px}
+  .line-float small{display:none}
+  .navbtns .btn{flex:1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.notice{background:#a3222a;color:#fff;text-align:center;padding:10px 16px;font-size:.95rem;line-height:1.5}.notice a{color:#fff;text-decoration:underline;margin-left:6px}
+</style>
+<style>
+.todo{display:inline-block;background:#fff3d6;color:#7a5200;border:1px dashed #e0b85e;padding:0 7px;border-radius:2px;font-size:.85em;line-height:1.7;font-weight:500;vertical-align:middle}
+.hero .todo,.visit .todo,footer .todo{background:#ffe9a8;color:#5a3d00;border-color:#e0b85e}
+.mitem{display:flex;align-items:baseline;gap:10px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.mitem .n{font-weight:500}
+.mitem .dots{flex:1;border-bottom:1px dotted #cdbfa9;transform:translateY(-5px);min-width:20px}
+.mitem .p{font-family:var(--serif);color:var(--red);font-weight:700;white-space:nowrap}
+.mlist{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;background:#fff;border:1px solid var(--line);padding:10px 30px 20px}
+.spice{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.lv{border:1.5px solid var(--line);background:#fff;padding:20px 10px;text-align:center;cursor:pointer;font-family:inherit}
+.lv[aria-checked=true]{border-color:var(--red);background:#fdf3ef}
+.lv b{display:block;font:700 1.15rem var(--serif);margin-top:6px}
+.lv small{color:var(--muted)}
+.chilis{display:inline-flex;gap:2px;vertical-align:middle}
+.chilis svg{width:16px;height:16px}
+.spice-msg{margin-top:16px}
+.hours{width:100%;border-collapse:collapse;margin:6px 0 26px;background:transparent}
+.hours td{border:0;border-bottom:1px dashed #ffffff22;padding:6px 0;color:#efe6dc}
+.hours td:first-child{color:#d6b47a;width:90px}
+.hours tr.today td{color:#fff;font-weight:700}
+.st{display:inline-block;padding:1px 10px;border-radius:2px;font-size:.85rem;font-weight:500;margin-left:8px}
+.st.open{background:#e4f1e6;color:var(--ok)}.st.closed{background:#fbe6e3;color:#a1261c}.st.unk{background:#fff1d6;color:var(--warn)}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--line);background:#fff;padding:14px 18px;text-decoration:none;margin-bottom:10px}
+.opt:hover{border-color:var(--red)}
+.opt b{display:block;font-weight:500}
+.opt small{color:var(--muted)}
+.opt.off{background:#fbf8f3}
+/* photos */
+.hero.photo{background:#1f1612 url(img/hero.jpg) 75% center/cover no-repeat}
+.hero.photo:before{background:linear-gradient(90deg,#1b120ef7 0%,#1b120ee0 36%,#1b120e66 62%,#1b120e10 100%)}
+.svc.has-img{padding-top:0}
+.svc.has-img:after{display:none}
+.svc .dimg{display:block;max-width:none;margin:0 -28px 20px;width:calc(100% + 56px);aspect-ratio:3/2;object-fit:cover}
+.ph.img{background:none}
+.ph.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.spice-sec{background:#1a1a1b url(img/chili_fry.jpg) right center/cover no-repeat;color:#fff;position:relative}
+.spice-sec:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1a1a1bf5 0%,#1a1a1be0 50%,#1a1a1b99 100%)}
+.spice-sec .wrap{position:relative}
+.spice-sec .lead,.spice-sec .hint{color:#d8cfc4}
+.spice-sec .lv{background:#ffffff12;border-color:#ffffff30;color:#fff}
+.spice-sec .lv small{color:#d8cfc4}
+.spice-sec .lv[aria-checked=true]{background:#8b1a1f;border-color:#e3c994}
+.spice-sec .lv[aria-checked=true] svg path{fill:#fff}
+.spice-sec .note{background:#ffffff14;color:#fff;border-left-color:#e3c994}
+.photo-band{display:grid;grid-template-columns:1.2fr 1fr;gap:0;background:#fff;border:1px solid var(--line);margin-top:34px}
+.photo-band img{width:100%;height:100%;object-fit:cover;min-height:260px;display:block}
+.photo-band div{padding:34px}
+@media (max-width:980px){.photo-band{grid-template-columns:1fr}}
+@media (max-width:620px){.topline [data-c=slogan]{display:none}.topline .wrap{justify-content:flex-end}.hero.photo{background-position:70% center}.hero.photo:before{background:linear-gradient(180deg,#1b120ee6 0%,#1b120ecc 60%,#1b120e99 100%)}.svc .dimg{margin:0 -28px 18px}}
+/* video carousel */
+.vwrap{position:relative}
+.vrow.drag{scroll-snap-type:none;scroll-behavior:auto;cursor:grabbing}
+.vrow.drag *{user-select:none}
+.vrow img{-webkit-user-drag:none;user-select:none}
+.vrow::-webkit-scrollbar{display:none}
+.vrow{scrollbar-width:none;-ms-overflow-style:none;cursor:grab;display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 18px}
+.vclip{flex:0 0 260px;scroll-snap-align:start}
+.vbox{position:relative;aspect-ratio:9/16;background:#140d0b;overflow:hidden;border:1px solid var(--line)}
+.vbox img.cv,.vbox video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.vbox video{object-fit:contain}
+.vbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.vplay{position:absolute;inset:0;border:0;width:100%;cursor:pointer;color:#fff;background:linear-gradient(0deg,#140d0b99 0%,#140d0b00 30%);display:flex;align-items:flex-end;justify-content:flex-end;padding:14px}
+.vplay .circle{width:56px;height:56px;border-radius:50%;border:2px solid #fff;background:#ffffff2e;display:grid;place-items:center;font-size:1.35rem;padding-left:5px;transition:transform .2s}
+.vplay:hover .circle{transform:scale(1.08)}
+.vplay .rank{position:absolute;left:12px;top:12px;font-size:.75rem;letter-spacing:.06em;background:var(--red);padding:2px 10px;border-radius:20px}
+.vclip h3{font-size:1.02rem;margin:10px 0 2px;line-height:1.5}
+.vclip p{margin:0;color:var(--muted);font-size:.85rem;line-height:1.6}
+.varrow{position:absolute;top:calc(50% - 60px);width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:#fffffff2;box-shadow:0 6px 18px #2a24201f;cursor:pointer;font-size:1.3rem;color:var(--red);z-index:2;display:grid;place-items:center}
+.varrow.prev{left:-22px}.varrow.next{right:-22px}
+@media (max-width:1240px){.varrow.prev{left:6px}.varrow.next{right:6px}}
+body{overflow-x:clip}
+.varrow[disabled]{opacity:0;pointer-events:none}
+@media (max-width:620px){
+  #awards .photo-band{grid-template-columns:1fr!important}
+  #awards .photo-band img{min-height:0!important;height:300px!important;object-position:center 30%!important}
+  #awards .photo-band>div{padding:24px 20px}
+  .lv .chilis svg{width:11px;height:11px}
+  .lv .chilis{gap:0;flex-wrap:wrap;justify-content:center;max-width:100%}
+  .lv{overflow:hidden}
+}
+/* top info card */
+.infobar{background:#fff;border-bottom:1px solid var(--line)}
+.infobar .wrap{display:grid;grid-template-columns:1.2fr 1.4fr 1fr;gap:0}
+.infobar a,.infobar div.cell{display:flex;gap:12px;align-items:center;padding:14px 18px;text-decoration:none;border-left:1px solid var(--line);min-height:64px}
+.infobar a:last-child{border-right:1px solid var(--line)}
+.infobar .ic{flex:none;width:36px;height:36px;border-radius:50%;background:var(--cream);display:grid;place-items:center;font-size:1.05rem}
+.infobar b{display:block;font-weight:500;line-height:1.4}
+.infobar small{color:var(--muted);font-size:.82rem;line-height:1.4;display:block}
+.combo{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.combo .c{background:#fff;border:1px solid var(--line);padding:18px 20px}
+.combo .c b{font-family:var(--serif);font-size:1.05rem}
+.combo .c ul{list-style:none;padding:0;margin:8px 0 10px;color:var(--muted);font-size:.9rem;line-height:1.8}
+.combo .c .sum{border-top:1px dashed var(--line);padding-top:8px;display:flex;justify-content:space-between;align-items:baseline}
+.combo .c .sum strong{font-family:var(--serif);color:var(--red);font-size:1.35rem}
+@media (max-width:1100px){.combo{grid-template-columns:1fr 1fr}}@media (max-width:620px){.combo{grid-template-columns:1fr}}
+@media (max-width:620px){
+  .infobar .wrap{grid-template-columns:1fr;width:100%}
+  .infobar a,.infobar div.cell{border-left:0;border-right:0!important;border-bottom:1px solid var(--line);padding:11px 18px;min-height:0}
+  .tabs button{min-height:44px;padding:10px 14px}
+  .mitem .n{flex:0 1 auto;min-width:0}
+}
+@media (max-width:620px){.hero{min-height:0!important}.hero .wrap{padding:30px 0 30px!important}.hero h1{font-size:2.5rem!important;margin:10px 0!important}.hero .btns{margin-top:18px!important}.hero .wrap>img{width:64px!important;height:64px!important;margin-bottom:10px!important}.hero p{font-size:.98rem}}
+@media (max-width:620px){.spice-scope{grid-template-columns:1fr!important}}
+/* mobile action bar */
+.mbar{display:none}
+@media (max-width:620px){
+  .mbar{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fffcf7f7;backdrop-filter:blur(8px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .mbar a,.mbar button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0 9px;font:inherit;font-size:.8rem;color:var(--ink);text-decoration:none;background:none;border:0;cursor:pointer}
+  .mbar span{font-size:1.15rem;line-height:1.2}
+  .mbar .mb-line{color:#06a347;font-weight:700}
+  .line-float{display:none!important}
+  body{padding-bottom:64px}
+  .toast{bottom:80px}
+  .combo-tips{grid-template-columns:1fr!important}
+}
+@media (max-width:620px){.vclip{flex-basis:68vw}.varrow{display:none}}
+@media (max-width:980px){.spice{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.lv small{display:none}.lv{padding:14px 4px}}
+@media (max-width:620px){.mlist{grid-template-columns:1fr;padding:6px 18px 14px}.lv b{font-size:.95rem}}
+</style>
+{{JSONLD}}
+</head>
+<body>
+{{NOTICE}}
+
+
+<div class="topline"><div class="wrap"><span data-c="slogan" data-plain>手作麻辣鴨血、臭豆腐｜麻辣鍋湯底專賣店</span><span class="fontsize" aria-label="字級">字級 <button type="button" data-fs="normal" aria-pressed="true">標準</button><button type="button" data-fs="large" aria-pressed="false">放大</button></span></div></div>
+
+<div id="notice" role="status" style="display:none;background:#8b1a1f;color:#fff;text-align:center;padding:10px 16px;font-size:.98rem;line-height:1.6"></div>
+<header>
+  <nav class="nav wrap" aria-label="主選單">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="八辛吉 Logo" width="54" height="54" style="width:54px;height:54px;flex:none"><span><b data-c="name">八辛吉手作麻辣燙</b><small data-c="branch" data-plain>台南永康總店</small></span></a>
+    <div class="menu" id="menu">
+      <a href="#videos">影音</a><a href="#signature">招牌必點</a><a href="#noodles">麵食</a><a href="#menu-sec">菜單</a><a href="#spice">辣度</a><a href="#about">關於我們</a><a href="#visit">營業資訊</a>
+      <button class="btn line sm" type="button" data-line>LINE</button>
+      <a class="btn sm" href="#order" style="color:#fff">外帶／外送</a>
+    </div>
+    <button class="burger" type="button" aria-label="開啟選單" aria-expanded="false" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<div class="drawer" id="drawer"><div class="in">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><b style="font-family:var(--serif)">選單</b><button class="close" style="position:static" type="button" id="drawerClose" aria-label="關閉選單">×</button></div>
+  <a href="#signature">招牌必點</a><a href="#menu-sec">菜單</a><a href="#spice">辣度</a><a href="#about">關於我們</a><a href="#order">內用・外帶・外送</a><a href="#visit">營業資訊</a><a href="#faq">常見問題</a>
+  <div style="display:grid;gap:10px;margin-top:20px"><button class="btn line" type="button" data-line>LINE 詢問</button><a class="btn" href="#order">外帶／外送</a></div>
+</div></div>
+
+<main id="top">
+  <section class="hero photo" style="padding:0">
+    <div class="wrap">
+      <img src="img/logo.png" alt="" width="96" height="96" style="width:96px;height:96px;display:block;margin-bottom:18px">
+      <div class="eyebrow">手作麻辣鴨血・臭豆腐</div>
+      <h1>一口麻<br>一口辣</h1>
+      <p data-c="intro">數十種天然漢方食材熬煮的麻辣湯底，搭配手工翻炒一個多小時的獨特辣沾醬。</p>
+      <div class="btns"><a class="btn" href="#menu-sec">看菜單</a><a class="btn light" href="#order">外帶／外送 →</a></div>
+    </div>
+    
+  </section>
+
+  <div class="infobar" aria-label="店家資訊"><div class="wrap">
+    <a href="#visit"><span class="ic">🕒</span><span><b id="ibToday">今日營業時間</b><small id="ibStatus"></small></span></a>
+    <a id="ibAddr" href="#visit" target="_blank" rel="noopener"><span class="ic">📍</span><span><b data-c="address" data-plain>臺南市永康區永明街45-1號</b><small>點我開啟地圖導航</small></span></a>
+    <a id="ibTel" href="#order"><span class="ic">📞</span><span><b data-c="phone" data-plain>06-202-6790</b><small>外帶可先電話點餐</small></span></a>
+  </div></div>
+
+  <div class="quick"><div class="wrap">
+    <a href="#menu-sec"><b>看菜單</b><span id="quickPrice">鍋底 $110 起・烏龍麵 $165</span></a>
+    <a href="#order"><b>外帶外送</b><span>電話・LINE・Uber Eats・foodpanda</span></a>
+    <a href="#videos"><b>活動影音</b><span>TikTok 人氣影片</span></a>
+    <a href="#spice"><b>選辣度</b><span>微微辣～大辣・也有不辣</span></a>
+  </div></div>
+
+  <section class="media" id="videos"><div class="wrap">
+    <div class="head"><div><div class="kicker">VIDEOS</div><h2>活動影音</h2></div><a class="more" id="ttMore" href="#videos" target="_blank" rel="noopener">更多影片在 TikTok ↗</a></div>
+    <p class="lead" style="margin:-18px 0 22px">TikTok 人氣影片，往右滑看更多。按下播放鍵才會播放。</p>
+    <div class="vwrap">
+      <button class="varrow prev" type="button" id="vPrev" aria-label="上一支">‹</button>
+      <div class="vrow" id="vrow" role="list"></div>
+      <button class="varrow next" type="button" id="vNext" aria-label="下一支">›</button>
+    </div>
+  </div></section>
+
+  <section id="signature"><div class="wrap">
+    <div class="head"><div><div class="kicker">SIGNATURE</div><h2>招牌必點</h2></div><a class="more" href="#menu-sec">完整菜單 →</a></div>
+    <div class="svcgrid" id="sigList"></div>
+    <div class="photo-band"><img src="img/tofu_youtiao.jpg" alt="臭豆腐與老油條" loading="lazy"><div><div class="kicker">MUST ADD</div><h3 style="font-size:1.5rem;margin:6px 0 10px">加點老油條，店家激推！</h3><p class="lead" style="margin:0 0 16px">吸飽麻辣湯汁的老油條，配上手工四川辣椒醬。辣醬也能帶一罐回家（380ml $240）。</p><dl style="display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0 0 18px"><dt class="hint">老油條</dt><dd style="margin:0;color:var(--red);font-weight:700">$35</dd><dt class="hint">手工四川辣椒醬</dt><dd style="margin:0;color:var(--red);font-weight:700">$240</dd></dl><a class="more" href="#menu-sec">看完整菜單 →</a></div></div>
+    <div class="flowline"><b>第一次來？</b><span class="s">選鍋底或麵食</span>→<span class="s">選辣度（微微辣～大辣）</span>→<span class="s">自由加點配料</span>→<span class="s">加白飯或主食</span></div>
+    <div class="combo-tips" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px">
+      <div class="note" style="margin:0"><b>不知道點什麼？</b><br>先點「招牌麻辣綜合鍋底」，鴨血、臭豆腐一次吃到。</div>
+      <div class="note" style="margin:0"><b>怕辣？</b><br>選「微微辣」，或改點龍骨、酸白菜等不辣鍋底。</div>
+      <div class="note" style="margin:0"><b>想吃飽？</b><br>加一碗白飯 $15，或直接點讚岐烏龍麵。</div>
+    </div>
+    <div class="combo" id="combos"></div>
+    <p class="hint" style="margin-top:8px">以上為點餐範例，金額依菜單價格自動計算，實際以現場點選為準。</p>
+  </div></section>
+
+  <section id="noodles" style="padding-top:0"><div class="wrap">
+    <div class="head"><div><div class="kicker">NOODLES</div><h2>麵食系列｜讚岐烏龍麵</h2></div><a class="more" href="#menu-sec">完整菜單 →</a></div>
+    <p class="lead" style="margin:-18px 0 26px">每碗都有豬肉片、高麗菜、青江菜、金針菇、豆皮、木耳絲、手工蛋餃、鑫鑫腸、魚板。另有四川辣醬乾拌麵 $75。</p>
+    <div class="svcgrid" id="noodleList"></div>
+  </div></section>
+
+  <section class="media" id="menu-sec"><div class="wrap">
+    <div class="head"><div><div class="kicker">MENU</div><h2>菜單</h2></div><span><button class="btn ghost sm" type="button" data-share="menu-sec" style="margin-right:12px">分享菜單</button><span class="lead" style="font-size:.95rem">價格以現場公告為準・<span style="white-space:nowrap">{{UPDATED}} 更新</span></span></span></div>
+    <div class="tabs" role="tablist" id="menuTabs"></div>
+    <div class="note" id="menuNote" style="margin-bottom:12px"></div>
+    <div class="mlist" id="menuList">{{MENU_STATIC}}</div>
+    <p class="hint" style="margin-top:14px">🌶 標示為麻辣口味，可選辣度：微微辣～微辣＜小辣＜中辣＜大辣。圖片僅供參考，以現場實物為準。對特定食材過敏，請點餐時先告知店員。</p>
+  </div></section>
+
+  <section id="spice" class="spice-sec"><div class="wrap">
+    <div class="head"><div><div class="kicker">SPICE LEVEL</div><h2>選你的辣度</h2></div><span class="lead" style="font-size:.95rem">麻辣鍋底與麵食可選辣度<br><small style="opacity:.75">背景：店內手工翻炒辣椒</small></span></div>
+    <div class="spice" id="spiceList" role="radiogroup" aria-label="辣度（單選）"></div>
+    <div class="note spice-msg" id="spiceMsg" aria-live="polite"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px" class="spice-scope">
+      <div class="note" style="margin:0"><b>可以選辣度</b><br>招牌麻辣綜合鍋底、麻辣臭豆腐鍋底、麻辣鴨血鍋底、麻辣鴨血 讚岐烏龍麵、麻辣臭豆腐 讚岐烏龍麵</div>
+      <div class="note" style="margin:0"><b>不辣</b><br>龍骨臭豆腐鍋底、東北酸白菜鍋底、龍骨臭豆腐 讚岐烏龍麵</div>
+    </div>
+    <div class="photo-band" style="background:#ffffff10;border-color:#ffffff30"><img src="img/noodle_bone.jpg" alt="龍骨臭豆腐 讚岐烏龍麵" loading="lazy" style="max-height:340px"><div><div class="kicker">NOT SPICY</div><h3 style="font-size:1.4rem;margin:6px 0 10px;color:#fff">不吃辣也能來</h3><p style="margin:0 0 14px;color:#d8cfc4">選不辣的鍋底，一樣有豐富配料。</p><dl style="display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0"><dt style="color:#d8cfc4">龍骨臭豆腐鍋底</dt><dd style="margin:0;color:var(--gold-l);font-weight:700">$110</dd><dt style="color:#d8cfc4">東北酸白菜鍋底</dt><dd style="margin:0;color:var(--gold-l);font-weight:700">$120</dd><dt style="color:#d8cfc4">龍骨臭豆腐 讚岐烏龍麵</dt><dd style="margin:0;color:var(--gold-l);font-weight:700">$165</dd></dl></div></div>
+  </div></section>
+
+  <section class="story" id="about"><div class="wrap storygrid">
+    <div class="ph img"><img src="img/spices_warm.jpg" alt="八角、肉桂、花椒等天然漢方香料" loading="lazy" style="object-position:center 40%"></div>
+    <div>
+      <div class="kicker">BRAND STORY</div>
+      <h2>為什麼叫「八辛吉」？</h2>
+      <p style="color:#5f564b;margin-bottom:10px">「麻辣」主要以<b>八種辛香料</b>熬製而成，吃起來舌頭微麻、帶著辛辣：</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px">
+        <span class="chip full">花椒</span><span class="chip full">辣椒</span><span class="chip full">桂皮</span><span class="chip full">八角</span><span class="chip full">大茴</span><span class="chip full">小茴</span><span class="chip full">草果</span><span class="chip full">香葉</span>
+      </div>
+      <p style="color:#5f564b">「吉」代表好、有利、幸福。八種辛香料加上一份祝福，就是<b>八辛吉</b>。</p>
+      <details class="faq" style="margin:18px 0 6px"><summary>創辦人的故事</summary><div>創辦人沈漢威先生年輕時在麻辣火鍋店工作，金融風暴時被減薪後離開，展開人生第一次創業：擺過夜市、開過火鍋店，卻因經驗不足處處碰壁。後來因緣際會進入知名連鎖品牌體系學習，體認到品牌經營的重要，才有了今天的八辛吉。</div></details>
+      <p style="color:#5f564b" data-c="story"></p>
+      <div id="points"></div>
+    </div>
+  </div></section>
+
+  <section id="awards" style="padding:64px 0"><div class="wrap">
+    <div class="photo-band" style="grid-template-columns:minmax(0,.7fr) 1fr;margin:0;align-items:center">
+      <img src="img/awards.jpg" alt="foodpanda 2022 百萬人氣商家、五星級商家獎牌" loading="lazy" style="height:100%;min-height:420px;object-position:center 45%">
+      <div><div class="kicker">AWARDS</div><h2 style="margin-bottom:6px">外送平台認證的人氣</h2><p class="hint" style="margin:0 0 14px">2022 年 foodpanda 頒發</p>
+        <div class="fact"><b>2022</b>foodpanda 百萬人氣商家（Golden Restaurant）</div>
+        <div class="fact"><b>2022</b>foodpanda 五星級商家</div>
+        <p class="lead">在家也想吃？外送一樣熱騰騰送到。</p>
+        <a class="btn" href="#order">外帶／外送 →</a></div>
+    </div>
+  </div></section>
+
+  <section class="lineband" id="order"><div class="wrap linegrid">
+    <div>
+      <div class="kicker">ORDER</div>
+      <h2>內用・外帶・外送</h2>
+      <p class="lead">打電話、傳 LINE，或用外送平台都可以。手機點按鈕直接開啟。</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><button class="btn line" type="button" data-line>LINE 詢問</button><a class="btn ghost" href="#visit">營業時間</a></div>
+    </div>
+    <div id="orderOpts"></div>
+  </div></section>
+
+  <section class="visit" id="visit" style="padding:0"><div class="visitgrid">
+    <div class="visitinfo">
+      <div class="kicker">VISIT US</div>
+      <h2>來吃一鍋熱的。<span id="openStatus"></span></h2>
+      <dl>
+        <dt>地址</dt><dd><span data-c="address">臺南市永康區永明街45-1號</span> <button type="button" class="copyaddr" style="margin-left:6px;border:1px solid #ffffff55;background:transparent;color:#fff;font:inherit;font-size:.8rem;padding:2px 10px;cursor:pointer;border-radius:2px">複製地址</button></dd>
+        <dt>電話</dt><dd data-c="phone">06-202-6790</dd>
+        <dt>停車</dt><dd data-c="parking">店家沒有專屬停車場，請自行尋找附近停車位。</dd>
+      </dl>
+      <table class="hours"><tbody id="hoursTable"></tbody></table>
+      <p style="color:#d8cfc4;font-size:.9rem;margin:-12px 0 22px">⚠ 颱風、連假等臨時異動，會公告在 <a id="fbNote" href="#" target="_blank" rel="noopener" style="color:#fff">Facebook</a>、<a id="igNote" href="#" target="_blank" rel="noopener" style="color:#fff">Instagram</a> 和 LINE，出發前可以先看一下。</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn light" id="mapBtn" href="#visit" target="_blank" rel="noopener">開啟 Google 地圖導航 ↗</a><button class="btn light" type="button" data-share="visit">分享店家資訊</button></div>
+    </div>
+    <a class="map photo" id="mapLink" href="#visit" target="_blank" rel="noopener" aria-label="開啟地圖導航"><img src="img/storefront.jpg" alt="八辛吉手作麻辣燙 永康總店 店面" loading="lazy"><span class="pin"><b data-c="name">八辛吉手作麻辣燙</b><span data-c="address">臺南市永康區永明街45-1號</span><br>開啟地圖導航 ↗</span></a>
+  </div></section>
+
+  <section id="faq"><div class="wrap" style="max-width:820px">
+    <div class="kicker">FAQ</div><h2 style="margin-bottom:20px">常見問題</h2>
+    <div id="faqList">{{FAQ_STATIC}}</div>
+  </div></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="img/logo.png" alt="" width="64" height="64" style="width:64px;height:64px;display:block;margin-bottom:10px"><b style="font-family:var(--serif);font-size:1.15rem;letter-spacing:.1em" data-c="name">八辛吉手作麻辣燙</b><p style="margin:8px 0 0"><span data-c="address">臺南市永康區永明街45-1號</span><br>電話 <span data-c="phone">06-202-6790</span></p></div>
+      <div><b>網站導覽</b><ul><li><a href="#signature">招牌必點</a></li><li><a href="#menu-sec">菜單</a></li><li><a href="#spice">辣度</a></li><li><a href="#about">關於我們</a></li></ul></div>
+      <div><b>聯絡</b><ul id="footLinks"><li><a href="#order">內用・外帶・外送</a></li><li><a href="#visit">營業資訊</a></li><li><button class="lnk" type="button" data-line>LINE</button></li></ul></div>
+    </div>
+    <div class="copy"><span>© <span data-c="name" data-plain>八辛吉手作麻辣燙</span></span><span>菜單與營業資訊更新：{{UPDATED}}・價格以店內公告為準</span></div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="快速聯絡">
+  <a id="mbCall" href="#order"><span>📞</span>撥電話</a>
+  <a id="mbMap" href="#visit" target="_blank" rel="noopener"><span>📍</span>導航</a>
+  <button type="button" class="copyaddr"><span>📋</span>複製地址</button>
+  <button type="button" data-line class="mb-line"><span>💬</span>LINE</button>
+</nav>
+<button class="line-float" type="button" data-line aria-label="LINE 聯絡店家"><span>LINE</span><small>點餐詢問</small></button>
+
+<div class="modal" id="lineModal" role="dialog" aria-modal="true" aria-labelledby="lineTitle"><div class="dialog">
+  <button class="close" type="button" data-close aria-label="關閉">×</button>
+  <div class="kicker">LINE</div><h2 id="lineTitle">LINE 聯絡我們</h2>
+  <p id="lineMsg">如果 LINE 沒有自動開啟，請改用電話聯絡：</p>
+  <p style="font-size:1.1rem" data-c="phone">06-202-6790</p>
+</div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* =========================================================
+   店家資料：只要改這裡。留空 '' 的地方會顯示「待填」。
+   ========================================================= */
+/*__DATA__*/
+
+/* ---------- 以下不用改 ---------- */
+const $=(s,el=document)=>el.querySelector(s), $$=(s,el=document)=>[...el.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let todo=0; const T=l=>{todo++;return `<span class="todo">待填${l?'：'+l:''}</span>`};
+const val=(v,l)=>v?esc(v):T(l);
+const chili='<svg viewBox="0 0 24 24"><path fill="#a3222a" d="M17 3c-1 0-1.6.7-1.8 1.6C12 5 9 7.4 7 11c-2 3.6-3 7-5 9 4 1 9-1 12-5 2.6-3.4 3.4-6.5 3-9.2.9-.3 1.6-1 1.8-2-.5.2-1 .2-1.4 0 .2-.4.2-.6-.4-.8z"/></svg>';
+const chilis=n=>`<span class="chilis" aria-label="辣度 ${n}">${chili.repeat(n)}</span>`;
+const DAYS=['週日','週一','週二','週三','週四','週五','週六'];
+const isMobile=()=>matchMedia('(max-width:620px)').matches;
+
+function menuPrice(n){for(const c of Object.values(MENU)){const it=c.items.find(x=>x.n===n);if(it&&it.p)return +it.p}return null}
+function fill(){
+  todo=0;
+  const names={name:'店名',slogan:'標語',intro:'首頁介紹',story:'店家故事',address:'地址',phone:'電話',parking:'停車資訊'};
+  $$('[data-c]').forEach(el=>{const k=el.dataset.c; if(el.hasAttribute('data-plain')){ if(SHOP[k]) el.textContent=SHOP[k]; return; } el.innerHTML=val(SHOP[k],names[k]);});
+  /* 標題固定寫在 <title>，不由程式覆蓋（SEO） */
+  // 招牌
+  const card=(d,i)=>{const mp=menuPrice(d.name);if(mp!=null)d={...d,price:String(mp)};return `<article class="svc${d.img?' has-img':''}">${d.img?`<img class="dimg" src="${esc(d.img)}" alt="${esc(d.name)} 實拍照" loading="lazy">`:''}<div class="tag">0${i+1}　｜　${esc(d.tag)}</div><h3>${esc(d.name)}</h3><p>${d.desc?esc(d.desc):T('描述')}</p>
+    <dl><dt>價格</dt><dd style="font-family:var(--serif);color:var(--red);font-weight:700">${d.price?'$'+esc(d.price):T()}</dd>${d.spice?`<dt>辣度</dt><dd>${chilis(1)} 可選微微辣～大辣</dd>`:''}</dl>
+    <a class="btn" href="#menu-sec">看完整菜單 →</a></article>`};
+  $('#sigList').innerHTML=SIGNATURE.map(card).join('');
+  $('#noodleList').innerHTML=NOODLES.map(card).join('');
+  // 菜單
+  const cats=Object.keys(MENU);
+  $('#menuTabs').innerHTML=cats.map((c,i)=>`<button role="tab" type="button" aria-selected="${i===0}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
+  const show=c=>{$$('#menuTabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.cat===c));
+    const C=MENU[c]; $('#menuNote').innerHTML=C.note?esc(C.note):''; $('#menuNote').style.display=C.note?'block':'none';
+    $('#menuList').innerHTML=C.items.map(it=>`<div class="mitem"><span class="n">${it.hot?chilis(1)+' ':''}${esc(it.n)}${it.d?` <small class="hint">（${esc(it.d)}）</small>`:''}${it.tag?` <span class="chip full" style="margin-left:4px">${esc(it.tag)}</span>`:''}</span><span class="dots"></span><span class="p">${it.p?'$'+esc(it.p):'<span class="todo">待填</span>'}</span></div>`).join('');};
+  $$('#menuTabs button').forEach(b=>b.onclick=()=>show(b.dataset.cat)); show(cats[0]);
+  cats.forEach(c=>MENU[c].items.forEach(it=>{if(!it.p)todo++}));
+  // 辣度
+  $('#spiceList').innerHTML=LEVELS.map((l,i)=>`<button class="lv" type="button" role="radio" data-lv="${i}" aria-checked="${i===0}" tabindex="${i===0?0:-1}">${chilis(i+1)}<b>${l.name}</b><small>${l.sub}</small></button>`).join('');
+  const pick=(i,focus)=>{$$('.lv').forEach(b=>{const on=b.dataset.lv==i;b.setAttribute('aria-checked',on);b.tabIndex=on?0:-1;if(on&&focus)b.focus()}); $('#spiceMsg').innerHTML=`<b>${LEVELS[i].name}</b>　${LEVELS[i].msg}`;};
+  $$('.lv').forEach(b=>{b.onclick=()=>pick(+b.dataset.lv);b.onkeydown=e=>{const k={ArrowRight:1,ArrowDown:1,ArrowLeft:-1,ArrowUp:-1}[e.key];if(k){e.preventDefault();pick((+b.dataset.lv+k+LEVELS.length)%LEVELS.length,true)}}}); pick(0);
+  // 特色
+  $('#points').innerHTML=SHOP.points.map((p,i)=>`<div class="fact"><b>0${i+1}</b>${val(p,'店家特色')}</div>`).join('');
+  // 訂位外送
+  const tel=SHOP.phone.replace(/[^\d+]/g,'');
+  const opts=[['📞 電話點餐','外帶預訂、到店取餐｜'+SHOP.phone,SHOP.phone?'tel:'+tel:''],['💬 LINE','詢問品項、訂餐、看最新公告',SHOP.lineUrl],['🛵 Uber Eats','直接外送到家',SHOP.ubereats],['🛵 foodpanda','直接外送到家',SHOP.foodpanda]];
+  $('#orderOpts').innerHTML=opts.map(([t,s,h])=>h?`<a class="opt" href="${esc(h)}" ${h.startsWith('http')?'target="_blank" rel="noopener"':''}><span><b>${t}</b><small>${esc(s)}</small></span><span>↗</span></a>`:`<div class="opt off"><span><b>${t}</b><small>${T('連結')}</small></span></div>`).join('');
+  // 營業時間
+  const now=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Taipei'})), d=now.getDay(), fmt=h=>esc(h).replace(/,/g,'、');  // 一律用台灣時間
+  $('#hoursTable').innerHTML=[1,2,3,4,5,6,0].map(i=>{const h=SHOP.hours[i];return `<tr class="${i===d?'today':''}"><td>${DAYS[i]}</td><td>${h===null?'公休':(h?fmt(h):T())}</td></tr>`}).join('');
+  const th=SHOP.hours[d];
+  
+  let st='unk',txt='時間待填';
+  if(th===null){st='closed';txt='今日公休'}
+  else if(th){const m=now.getHours()*60+now.getMinutes();const open=th.split(',').some(r=>{const [a,b]=r.split('-').map(x=>{const[h,mm]=x.trim().split(':');return +h*60+(+mm||0)});return b<a?(m>=a||m<b):(m>=a&&m<b)});st=open?'open':'closed';txt=open?'營業中':'休息中';}
+  $('#openStatus').innerHTML=`<span class="st ${st}">${txt}</span>`;
+  // 地圖
+  const q=(SHOP.name+' '+SHOP.address).trim();
+  if(q){const u='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q); $('#mapLink').href=u; $('#mapBtn').href=u;}
+  // 電話、地址改成可點的連結
+  const mapUrl='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent((SHOP.name+' '+SHOP.address).trim());
+  $$('[data-c=phone]').forEach(el=>{ if(SHOP.phone && !el.closest('a')) el.innerHTML=`<a href="tel:${tel}" style="text-decoration:underline;text-underline-offset:3px">${esc(SHOP.phone)}</a>`; });
+  $$('[data-c=address]').forEach(el=>{ if(SHOP.address && !el.closest('a')) el.innerHTML=`<a href="${mapUrl}" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">${esc(SHOP.address)}</a>`; });
+  // 首頁價格（從菜單自動帶入）
+  {const base=(MENU['鍋底系列']?.items||[]).map(x=>+x.p).filter(Boolean),udon=(MENU['麵食系列']?.items||[]).filter(x=>/烏龍麵/.test(x.n)).map(x=>+x.p).filter(Boolean);
+   $('#quickPrice').textContent=[base.length?`鍋底 $${Math.min(...base)} 起`:'',udon.length?`烏龍麵 $${Math.min(...udon)}${udon.some(p=>p!==Math.min(...udon))?' 起':''}`:''].filter(Boolean).join('・');}
+  // 首頁資訊卡
+  $('#ibToday').textContent= th===null?'今日公休':(th?'今日 '+th.replace(/,/g,'、'):'營業時間');
+  $('#ibStatus').innerHTML=`<span class="st ${st}" style="margin:0">${txt}</span>　週日公休`.replace('　週日公休',SHOP.hours[0]===null?'　週日公休':'');
+  $('#ibAddr').href=mapUrl; if(SHOP.phone) $('#ibTel').href='tel:'+tel;
+  $('#fbNote').href=SHOP.facebook||'#'; $('#igNote').href=SHOP.instagram||'#';
+  // 點餐範例（依菜單價格自動計算）
+  const price=n=>{for(const c of Object.values(MENU)){const it=c.items.find(x=>x.n===n);if(it&&it.p)return +it.p}return null};
+  const COMBOS=[{t:'一個人簡單吃',items:['招牌麻辣綜合鍋底','白飯']},{t:'吃飽一點',items:['招牌麻辣綜合鍋底','白飯','牛肉片','老油條']},{t:'想吃麵',items:['麻辣鴨血 讚岐烏龍麵','手工蛋餃']},{t:'兩人分享',items:['招牌麻辣綜合鍋底','麻辣鴨血鍋底','白飯','白飯','牛肉片','老油條']}];
+  $('#combos').innerHTML=COMBOS.map(c=>{const rows=c.items.map(n=>[n,price(n)]);if(rows.some(r=>r[1]==null))return '';const sum=rows.reduce((a,r)=>a+r[1],0);
+    return `<div class="c"><b>${c.t}</b><ul>${rows.map(([n,p])=>`<li>${esc(n)}　$${p}</li>`).join('')}</ul><div class="sum"><span class="hint">約</span><strong>$${sum}</strong></div></div>`}).join('');
+  // FAQ
+  $('#faqList').innerHTML=FAQ.map(([q,a])=>`<details class="faq"><summary>${esc(q)}</summary><div>${a==='__'?T('答案'):esc(a)}</div></details>`).join('');
+  // 社群
+  $$('#footLinks li.soc').forEach(x=>x.remove());
+  [['Instagram',SHOP.instagram],['Facebook',SHOP.facebook],['TikTok',SHOP.tiktok]].filter(x=>x[1]).forEach(([n,u])=>$('#footLinks').insertAdjacentHTML('beforeend',`<li class="soc"><a href="${esc(u)}" target="_blank" rel="noopener">${n} ↗</a></li>`));
+  
+}
+
+/* =========================================================
+   Google 試算表後台：填入試算表 ID 後，網站會讀取試算表內容
+   ========================================================= */
+const SHEET_ID = '';
+function parseCSV(t){const rows=[];let r=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}else if(c=='"')q=true;else if(c==','){r.push(f);f=''}else if(c=='\n'){r.push(f);rows.push(r);r=[];f=''}else if(c!='\r')f+=c}if(f!==''||r.length){r.push(f);rows.push(r)}const h=rows.shift()||[];return rows.filter(x=>x.some(v=>v.trim())).map(x=>Object.fromEntries(h.map((k,i)=>[k.trim(),(x[i]||'').trim()])))}
+async function tab(name){const u=`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(name)}&_=${Math.floor(Date.now()/300000)}`;const r=await fetch(u);if(!r.ok)throw new Error(name);return parseCSV(await r.text())}
+const yes=v=>/^(是|y|yes|v|✓|1)$/i.test(String(v).trim());
+const num=v=>String(v).replace(/[^\d.]/g,'');
+const ymd=v=>{const m=String(v).match(/(\d{4})\D(\d{1,2})\D(\d{1,2})/);return m?new Date(+m[1],m[2]-1,+m[3]):null};
+function showNotices(list){const t=new Date();t.setHours(0,0,0,0);const on=list.filter(n=>yes(n['顯示'])&&n['內容']&&(!ymd(n['開始日期'])||ymd(n['開始日期'])<=t)&&(!ymd(n['結束日期'])||ymd(n['結束日期'])>=t));const el=$('#notice');if(on.length){el.innerHTML=on.map(n=>'📢 '+esc(n['內容'])).join('<br>');el.style.display='block'}else el.style.display='none'}
+async function loadSheet(){
+  if(!SHEET_ID) return;
+  try{
+    const [info,hrs,notes,cats,menu,rec,vids]=await Promise.all(['店家資訊','營業時間','公告','菜單分類','菜單','推薦','影片'].map(n=>tab(n).catch(()=>null)));
+    if(info){const m={};info.forEach(r=>m[r['項目']]=r['內容']);const K={店名:'name',分店:'branch',標語:'slogan',首頁介紹:'intro',品牌介紹:'story',地址:'address',電話:'phone',停車:'parking',LINE:'lineUrl',Instagram:'instagram',Facebook:'facebook',TikTok:'tiktok',UberEats:'ubereats',foodpanda:'foodpanda'};
+      Object.entries(K).forEach(([k,v])=>{if(k in m)SHOP[v]=m[k]});const pts=[1,2,3,4].map(i=>m['特色'+i]).filter(Boolean);if(pts.length)SHOP.points=pts;}
+    if(hrs){const D={週日:0,週一:1,週二:2,週三:3,週四:4,週五:5,週六:6};hrs.forEach(r=>{const d=D[r['星期']];if(d===undefined)return;const v=(r['時間']||'').replace(/，/g,',').replace(/\s/g,'').replace(/[–—~～]/g,'-');SHOP.hours[d]=/公休|休息/.test(v)?null:v})}
+    if(notes) showNotices(notes);
+    if(menu){const order=(cats||[]).slice().sort((a,b)=>(+a['順序']||99)-(+b['順序']||99));Object.keys(MENU).forEach(k=>delete MENU[k]);
+      order.forEach(c=>{MENU[c['分類']]={note:c['說明']||'',items:[]}});
+      menu.filter(r=>r['品名']&&!/^否$/.test(r['上架'])).forEach(r=>{const c=r['分類']||'其他';if(!MENU[c])MENU[c]={note:'',items:[]};MENU[c].items.push({n:r['品名'],d:r['備註'],p:num(r['價格']),hot:yes(r['麻辣']),tag:r['標籤']})});
+      Object.keys(MENU).forEach(k=>{if(!MENU[k].items.length)delete MENU[k]});}
+    if(rec){const mk=r=>({tag:r['小標'],name:r['品名'],desc:r['說明'],price:num(r['價格']),spice:yes(r['可選辣度'])?1:0,img:r['照片檔名']?'img/'+r['照片檔名']:''});
+      const s=rec.filter(r=>r['區塊']==='招牌'&&r['品名']).map(mk), n=rec.filter(r=>r['區塊']==='麵食'&&r['品名']).map(mk);
+      if(s.length)SIGNATURE.splice(0,SIGNATURE.length,...s); if(n.length)NOODLES.splice(0,NOODLES.length,...n);}
+    if(vids){const v=vids.filter(r=>!/^否$/.test(r['上架'])).map(r=>{const id=(r['TikTok網址'].match(/video\/(\d+)/)||[])[1];return id&&{id,title:r['標題'],desc:r['說明'],cover:r['封面檔名']?'img/'+r['封面檔名']:'img/logo.png',src:'',poster:''}}).filter(Boolean);
+      if(v.length)VIDEOS.splice(0,VIDEOS.length,...v);}
+    fill(); renderVideos();
+  }catch(e){ console.warn('試算表讀取失敗，使用網站內建資料',e); }
+}
+loadSheet();
+
+/* LINE、選單、彈窗、字級 */
+function openLine(){
+  if(SHOP.lineUrl){ const a=document.createElement('a');a.href=SHOP.lineUrl;a.target='_blank';a.rel='noopener';a.click(); return; }
+  $('#lineModal').classList.add('open'); document.body.style.overflow='hidden';
+}
+function closeModals(){$$('.modal.open').forEach(m=>m.classList.remove('open'));document.body.style.overflow=''}
+fill();
+/* 活動影音 */
+const vUrl=v=>`https://www.tiktok.com/@98vip888/video/${v.id}`;
+const canEmbed=/^https?:$/.test(location.protocol) && !/claude|anthropic/i.test(location.hostname);
+function openTT(v){const a=document.createElement('a');a.href=vUrl(v);a.target='_blank';a.rel='noopener';a.click();}
+function renderVideos(){
+  $('#vrow').innerHTML=VIDEOS.map((v,i)=>`<div class="vclip" role="listitem"><div class="vbox" data-i="${i}">
+      <img class="cv" src="${esc(v.poster||v.cover)}" alt="影片封面：${esc(v.title)}" loading="lazy">
+      <button class="vplay" type="button" aria-label="播放：${esc(v.title)}"><span class="rank">人氣 No.${i+1}</span><span class="circle" aria-hidden="true">▶</span></button>
+    </div><h3>${esc(v.title)}</h3><p>${esc(v.desc)} <a href="${vUrl(v)}" target="_blank" rel="noopener" style="color:var(--red)">TikTok ↗</a></p></div>`).join('');
+  $$('#vrow .vbox').forEach(box=>box.querySelector('.vplay').onclick=()=>{
+    const v=VIDEOS[+box.dataset.i];
+    // 同時只播一支：先停掉其他影片
+    $$('#vrow video').forEach(x=>x.pause());
+    if(v.src){ box.innerHTML=`<video src="${esc(v.src)}" poster="${esc(v.poster||v.cover)}" controls playsinline preload="metadata"></video>`; const vd=box.querySelector('video'); vd.play().catch(()=>{}); }
+    else if(canEmbed){ box.innerHTML=`<iframe src="https://www.tiktok.com/embed/v2/${v.id}" title="${esc(v.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`; }
+    else openTT(v);
+  });
+  const row=$('#vrow'), step=()=>($('.vclip').offsetWidth+18);
+  if(row._bound){ row.scrollLeft=0; return; } row._bound=true;
+  const upd=()=>{ $('#vPrev').disabled=row.scrollLeft<5; $('#vNext').disabled=row.scrollLeft+row.clientWidth>=row.scrollWidth-5; };
+  $('#vPrev').onclick=()=>row.scrollBy({left:-step()});
+  $('#vNext').onclick=()=>row.scrollBy({left:step()});
+  // 滑鼠按住拖曳切換（手機本來就能用手指滑）
+  let down=false,moved=false,sx=0,sl=0;
+  row.addEventListener('dragstart',e=>e.preventDefault());
+  row.addEventListener('pointerdown',e=>{ if(e.pointerType!=='mouse'||e.button!==0)return; e.preventDefault(); down=true;moved=false;sx=e.clientX;sl=row.scrollLeft; });
+  addEventListener('pointermove',e=>{ if(!down)return; const dx=e.clientX-sx; if(Math.abs(dx)>6){moved=true;row.classList.add('drag');} if(moved) row.scrollLeft=sl-dx; });
+  addEventListener('pointerup',()=>{ if(!down)return; down=false; if(moved){ row.classList.remove('drag'); const st=step(); row.scrollTo({left:Math.round(row.scrollLeft/st)*st,behavior:'smooth'}); } });
+  row.addEventListener('click',e=>{ if(moved){e.preventDefault();e.stopPropagation();moved=false;} },true);
+  row.addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+}
+$('#ttMore').href=SHOP.tiktok; renderVideos();
+
+/* 複製地址、底部捷徑 */
+$$('.copyaddr').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(SHOP.address);flash('已複製地址：'+SHOP.address)}catch(e){flash('地址：'+SHOP.address,6000)}}));
+{const t=SHOP.phone.replace(/[^\d+]/g,'');if(t)$('#mbCall').href='tel:'+t;$('#mbMap').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(SHOP.name+' '+SHOP.address);}
+/* 分享 */
+async function share(sec){
+  const url=(location.protocol.startsWith('http')&&!/claude|anthropic/i.test(location.hostname)?location.origin+location.pathname:'https://baxinji.netlify.app/')+'#'+sec;
+  const text=sec==='menu-sec'?'八辛吉手作麻辣燙的菜單':`八辛吉手作麻辣燙｜${SHOP.address}｜${SHOP.phone}`;
+  try{ if(navigator.share){ await navigator.share({title:'八辛吉手作麻辣燙',text,url}); return; } }catch(e){ if(e.name==='AbortError') return; }
+  try{ await navigator.clipboard.writeText(text+' '+url); flash('已複製連結，可以貼給朋友'); }catch(e){ flash('請複製這個網址分享：'+url,6000); }
+}
+function flash(m,t=2600){const el=$('#toast');el.textContent=m;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),t)}
+$$('[data-share]').forEach(b=>b.addEventListener('click',()=>share(b.dataset.share)));
+$$('[data-line]').forEach(b=>b.addEventListener('click',openLine));
+$$('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m||e.target.closest('[data-close]'))closeModals()}));
+$('#burger').onclick=()=>{$('#drawer').classList.add('open');$('#burger').setAttribute('aria-expanded','true')};
+$('#drawerClose').onclick=()=>$('#drawer').classList.remove('open');
+$('#drawer').onclick=e=>{if(e.target.id==='drawer'||e.target.tagName==='A')$('#drawer').classList.remove('open')};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModals();$('#drawer').classList.remove('open')}});
+$$('[data-fs]').forEach(b=>b.onclick=()=>{const lg=b.dataset.fs==='large';document.documentElement.classList.toggle('large',lg);$$('[data-fs]').forEach(x=>x.setAttribute('aria-pressed',x===b));try{localStorage.setItem('mlFs',b.dataset.fs)}catch(e){}});
+try{if(localStorage.getItem('mlFs')==='large')$('[data-fs=large]').click()}catch(e){}
+</script>
+</body>
+</html>

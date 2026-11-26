@@ -1,0 +1,54 @@
+{
+  "signature": [
+    {
+      "tag": "招牌鍋底",
+      "name": "招牌麻辣綜合鍋底",
+      "desc": "鴨血＋臭豆腐一次滿足，含豬肉片、高麗菜、青江菜、金針菇、豆皮、木耳絲。",
+      "price": "120",
+      "spicy": true,
+      "img": "img/hero.jpg"
+    },
+    {
+      "tag": "人氣鍋底",
+      "name": "麻辣臭豆腐鍋底",
+      "desc": "臭豆腐吸飽麻辣湯汁，搭配新鮮蔬菜與配料。",
+      "price": "115",
+      "spicy": true,
+      "img": "img/stinky.jpg"
+    },
+    {
+      "tag": "人氣鍋底",
+      "name": "麻辣鴨血鍋底",
+      "desc": "大塊鴨血入味，湯頭使用台灣豬大骨熬煮。",
+      "price": "115",
+      "spicy": true,
+      "img": "img/duckblood.jpg"
+    }
+  ],
+  "noodles": [
+    {
+      "tag": "麵食系列",
+      "name": "麻辣鴨血 讚岐烏龍麵",
+      "desc": "大塊鴨血配 Q 彈讚岐烏龍麵。",
+      "price": "165",
+      "spicy": true,
+      "img": "img/noodle_duck.jpg"
+    },
+    {
+      "tag": "麵食系列",
+      "name": "麻辣臭豆腐 讚岐烏龍麵",
+      "desc": "吸飽湯汁的臭豆腐配讚岐烏龍麵。",
+      "price": "165",
+      "spicy": true,
+      "img": "img/noodle_stinky.jpg"
+    },
+    {
+      "tag": "麵食系列",
+      "name": "龍骨臭豆腐 讚岐烏龍麵",
+      "desc": "不辣的龍骨湯底，清爽順口。",
+      "price": "165",
+      "spicy": false,
+      "img": "img/noodle_bone.jpg"
+    }
+  ]
+}

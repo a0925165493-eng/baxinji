@@ -1,0 +1,317 @@
+{
+  "updated": "2026-11-25",
+  "categories": [
+    {
+      "name": "鍋底系列",
+      "note": "內容物含豬肉片、高麗菜、青江菜、金針菇、豆皮、木耳絲。湯頭一律使用台灣豬大骨。",
+      "items": [
+        {
+          "name": "招牌麻辣綜合鍋底",
+          "detail": "鴨血＋臭豆腐",
+          "price": "120",
+          "spicy": true
+        },
+        {
+          "name": "麻辣臭豆腐鍋底",
+          "detail": "",
+          "price": "115",
+          "spicy": true
+        },
+        {
+          "name": "麻辣鴨血鍋底",
+          "detail": "",
+          "price": "115",
+          "spicy": true
+        },
+        {
+          "name": "龍骨臭豆腐鍋底",
+          "detail": "",
+          "price": "110",
+          "spicy": false
+        },
+        {
+          "name": "東北酸白菜鍋底",
+          "detail": "",
+          "price": "120",
+          "spicy": false
+        }
+      ]
+    },
+    {
+      "name": "麵食系列",
+      "note": "內容物含豬肉片、高麗菜、青江菜、金針菇、豆皮、木耳絲、手工蛋餃、鑫鑫腸、魚板。",
+      "items": [
+        {
+          "name": "麻辣鴨血 讚岐烏龍麵",
+          "detail": "",
+          "price": "165",
+          "spicy": true
+        },
+        {
+          "name": "麻辣臭豆腐 讚岐烏龍麵",
+          "detail": "",
+          "price": "165",
+          "spicy": true
+        },
+        {
+          "name": "龍骨臭豆腐 讚岐烏龍麵",
+          "detail": "",
+          "price": "165",
+          "spicy": false
+        },
+        {
+          "name": "四川辣醬乾拌麵",
+          "detail": "",
+          "price": "75",
+          "spicy": true
+        }
+      ]
+    },
+    {
+      "name": "主食",
+      "note": "",
+      "items": [
+        {
+          "name": "白飯",
+          "detail": "",
+          "price": "15",
+          "spicy": false
+        },
+        {
+          "name": "科學麵",
+          "detail": "",
+          "price": "20",
+          "spicy": false
+        },
+        {
+          "name": "寬粉絲",
+          "detail": "",
+          "price": "30",
+          "spicy": false
+        },
+        {
+          "name": "讚岐烏龍麵",
+          "detail": "",
+          "price": "45",
+          "spicy": false
+        }
+      ]
+    },
+    {
+      "name": "經典配料",
+      "note": "",
+      "items": [
+        {
+          "name": "鳥蛋",
+          "detail": "3顆",
+          "price": "10",
+          "spicy": false
+        },
+        {
+          "name": "凍豆腐",
+          "detail": "3塊",
+          "price": "10",
+          "spicy": false
+        },
+        {
+          "name": "鴨肉丸",
+          "detail": "3顆",
+          "price": "15",
+          "spicy": false
+        },
+        {
+          "name": "寧波年糕",
+          "detail": "",
+          "price": "20",
+          "spicy": false
+        },
+        {
+          "name": "豆皮",
+          "detail": "",
+          "price": "20",
+          "spicy": false
+        },
+        {
+          "name": "金針菇",
+          "detail": "",
+          "price": "20",
+          "spicy": false
+        },
+        {
+          "name": "米血",
+          "detail": "",
+          "price": "25",
+          "spicy": false
+        },
+        {
+          "name": "鑫鑫腸",
+          "detail": "",
+          "price": "25",
+          "spicy": false
+        },
+        {
+          "name": "麻辣臭豆腐",
+          "detail": "3塊",
+          "price": "25",
+          "spicy": false
+        },
+        {
+          "name": "龍骨臭豆腐",
+          "detail": "3塊",
+          "price": "25",
+          "spicy": false
+        },
+        {
+          "name": "麻辣鴨血",
+          "detail": "3塊",
+          "price": "25",
+          "spicy": false
+        },
+        {
+          "name": "香菇貢丸",
+          "detail": "",
+          "price": "30",
+          "spicy": false
+        },
+        {
+          "name": "蟹肉棒",
+          "detail": "",
+          "price": "35",
+          "spicy": false
+        },
+        {
+          "name": "老油條",
+          "detail": "",
+          "price": "35",
+          "spicy": false
+        },
+        {
+          "name": "手工蛋餃",
+          "detail": "5個",
+          "price": "40",
+          "spicy": false
+        }
+      ]
+    },
+    {
+      "name": "肉品海鮮",
+      "note": "",
+      "items": [
+        {
+          "name": "豬肉片",
+          "detail": "台灣",
+          "price": "35",
+          "spicy": false
+        },
+        {
+          "name": "牛肉片",
+          "detail": "巴拉圭",
+          "price": "40",
+          "spicy": false
+        },
+        {
+          "name": "羊肉片",
+          "detail": "紐西蘭",
+          "price": "40",
+          "spicy": false
+        },
+        {
+          "name": "花枝漿",
+          "detail": "",
+          "price": "30",
+          "spicy": false
+        },
+        {
+          "name": "魚冊",
+          "detail": "",
+          "price": "50",
+          "spicy": false
+        },
+        {
+          "name": "白蝦",
+          "detail": "",
+          "price": "55",
+          "spicy": false
+        },
+        {
+          "name": "鯛魚片",
+          "detail": "",
+          "price": "60",
+          "spicy": false
+        }
+      ]
+    },
+    {
+      "name": "嚴選時蔬",
+      "note": "",
+      "items": [
+        {
+          "name": "木耳",
+          "detail": "",
+          "price": "15",
+          "spicy": false
+        },
+        {
+          "name": "秀珍菇",
+          "detail": "",
+          "price": "20",
+          "spicy": false
+        },
+        {
+          "name": "玉米筍",
+          "detail": "",
+          "price": "20",
+          "spicy": false
+        },
+        {
+          "name": "青江菜",
+          "detail": "",
+          "price": "25",
+          "spicy": false
+        },
+        {
+          "name": "高麗菜",
+          "detail": "",
+          "price": "30",
+          "spicy": false
+        },
+        {
+          "name": "空心菜",
+          "detail": "",
+          "price": "30",
+          "spicy": false
+        }
+      ]
+    },
+    {
+      "name": "帶一份回家",
+      "note": "",
+      "items": [
+        {
+          "name": "桂花酸梅湯",
+          "detail": "",
+          "price": "40",
+          "spicy": false
+        },
+        {
+          "name": "手工四川辣椒醬",
+          "detail": "380ml",
+          "price": "240",
+          "spicy": true
+        },
+        {
+          "name": "麻辣湯底（無配料）",
+          "detail": "約1800ml",
+          "price": "220",
+          "spicy": false
+        },
+        {
+          "name": "龍骨湯底（無配料）",
+          "detail": "約1800ml",
+          "price": "220",
+          "spicy": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+# 八辛吉官網後台設定
+backend:
+  name: github
+  repo: a0925165493-eng/baxinji
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  commit_messages:
+    update: "後台更新：{{slug}}"
+    uploadMedia: "上傳照片：{{path}}"
+
+locale: zh_Hant
+site_url: https://baxinji.netlify.app
+display_url: https://baxinji.netlify.app
+logo_url: https://baxinji.netlify.app/img/logo.png
+media_folder: img
+public_folder: img
+
+collections:
+  - name: settings
+    label: 網站內容
+    editor: { preview: false }
+    files:
+      - name: notice
+        label: 📢 公告（臨時休息、活動）
+        file: data/notice.json
+        fields:
+          - { name: show, label: 顯示公告, widget: boolean, default: false, hint: 打開才會出現在網站最上方的紅色橫條 }
+          - { name: text, label: 公告內容, widget: string, required: false, hint: "例如：12/31 跨年夜營業到 20:00" }
+          - { name: link, label: 詳情連結（可不填）, widget: string, required: false, hint: 例如 FB 貼文網址 }
+
+      - name: hours
+        label: 🕒 營業時間
+        file: data/hours.json
+        fields:
+          - { name: mon, label: 週一, widget: string, hint: "格式：11:00-14:00,16:00-21:30；休息就填「公休」" }
+          - { name: tue, label: 週二, widget: string }
+          - { name: wed, label: 週三, widget: string }
+          - { name: thu, label: 週四, widget: string }
+          - { name: fri, label: 週五, widget: string }
+          - { name: sat, label: 週六, widget: string }
+          - { name: sun, label: 週日, widget: string }
+
+      - name: menu
+        label: 📋 菜單與價格
+        file: data/menu.json
+        fields:
+          - { name: updated, label: 菜單更新日期, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: false }
+          - name: categories
+            label: 菜單分類
+            label_singular: 分類
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: 分類名稱, widget: string }
+              - { name: note, label: 分類說明（可不填）, widget: text, required: false }
+              - name: items
+                label: 品項
+                label_singular: 品項
+                widget: list
+                summary: "{{fields.name}}　${{fields.price}}"
+                fields:
+                  - { name: name, label: 品名, widget: string }
+                  - { name: detail, label: 補充（例如 3顆、380ml，可不填）, widget: string, required: false }
+                  - { name: price, label: 價格（只填數字）, widget: string, pattern: ['^\d+$', '價格只能填數字'] }
+                  - { name: spicy, label: 麻辣口味（顯示辣椒）, widget: boolean, default: false }
+
+      - name: featured
+        label: ⭐ 招牌必點、麵食（有照片的卡片）
+        file: data/featured.json
+        fields:
+          - name: signature
+            label: 招牌必點
+            label_singular: 招牌
+            widget: list
+            summary: "{{fields.name}}"
+            fields: &card
+              - { name: tag, label: 小標籤, widget: string, required: false }
+              - { name: name, label: 品名, widget: string }
+              - { name: desc, label: 介紹, widget: text, required: false }
+              - { name: price, label: 價格（只填數字）, widget: string, pattern: ['^\d+$', '價格只能填數字'] }
+              - { name: spicy, label: 麻辣口味, widget: boolean, default: false }
+              - { name: img, label: 照片, widget: image, required: false, choose_url: false }
+          - name: noodles
+            label: 麵食系列
+            label_singular: 麵食
+            widget: list
+            summary: "{{fields.name}}"
+            fields: *card
+
+      - name: videos
+        label: 🎬 TikTok 影片
+        file: data/videos.json
+        fields:
+          - name: list
+            label: 影片（由上到下依序顯示）
+            label_singular: 影片
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: id, label: TikTok 影片編號, widget: string, hint: "影片網址最後那串數字，例如 https://www.tiktok.com/@98vip888/video/7243419373946326277 → 7243419373946326277" }
+              - { name: title, label: 標題, widget: string }
+              - { name: desc, label: 一句話說明, widget: string, required: false }
+              - { name: cover, label: 封面圖, widget: image, required: false, choose_url: false }
+
+      - name: shop
+        label: 🏠 店家資料
+        file: data/shop.json
+        fields:
+          - { name: name, label: 店名, widget: string }
+          - { name: branch, label: 分店名, widget: string, required: false }
+          - { name: slogan, label: 首頁小標, widget: string, required: false }
+          - { name: intro, label: 首頁介紹, widget: text, required: false }
+          - { name: story, label: 店家故事, widget: text, required: false }
+          - { name: points, label: 店家特色（4 點）, widget: list, field: { name: p, label: 特色, widget: string } }
+          - { name: address, label: 地址, widget: string }
+          - { name: phone, label: 電話, widget: string }
+          - { name: parking, label: 停車說明, widget: string, required: false }
+          - { name: lineUrl, label: LINE 官方帳號連結, widget: string, required: false }
+          - { name: facebook, label: Facebook 連結, widget: string, required: false }
+          - { name: instagram, label: Instagram 連結, widget: string, required: false }
+          - { name: tiktok, label: TikTok 連結, widget: string, required: false }
+          - { name: youtube, label: YouTube 連結, widget: string, required: false }
+          - { name: ubereats, label: Uber Eats 連結, widget: string, required: false }
+          - { name: foodpanda, label: foodpanda 連結, widget: string, required: false }
+
+      - name: faq
+        label: ❓ 常見問題
+        file: data/faq.json
+        fields:
+          - name: list
+            label: 問題
+            label_singular: 問題
+            widget: list
+            summary: "{{fields.q}}"
+            fields:
+              - { name: q, label: 問題, widget: string }
+              - { name: a, label: 回答, widget: text }
+
+      - name: levels
+        label: 🌶 辣度說明
+        file: data/levels.json
+        fields:
+          - name: list
+            label: 辣度（由不辣到最辣）
+            label_singular: 辣度
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: 名稱, widget: string }
+              - { name: sub, label: 小字, widget: string }
+              - { name: msg, label: 說明, widget: text }
