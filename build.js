@@ -81,7 +81,7 @@ let html = fs.readFileSync(path.join(__dirname, 'src', 'template.html'), 'utf8')
 const put = (k, v) => { if (!html.includes(k)) throw new Error('template 缺少 ' + k); html = html.split(k).join(v); };
 put('/*__DATA__*/', DATA); put('{{JSONLD}}', JSONLD); put('{{MENU_STATIC}}', MENU_STATIC); put('{{FAQ_STATIC}}', FAQ_STATIC); put('{{NOTICE}}', NOTICE); put('{{UPDATED}}', up); put('{{SITE}}', U);
 // 網頁上預先填好的店家文字
-['name', 'branch', 'slogan', 'intro', 'address', 'phone', 'parking'].forEach(k => {
+['name', 'headerName', 'branch', 'slogan', 'intro', 'address', 'phone', 'parking'].forEach(k => {
   html = html.replace(new RegExp(`(data-c="${k}"[^>]*>)[^<]*(<)`, 'g'), (m, a, b) => a + esc(shop[k] || '') + b);
 });
 

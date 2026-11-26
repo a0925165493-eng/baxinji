@@ -120,7 +120,8 @@ collections:
         label: 🏠 店家資料
         file: data/shop.json
         fields:
-          - { name: name, label: 店名, widget: string }
+          - { name: name, label: 店名（Google、分享預覽、頁尾用）, widget: string }
+          - { name: headerName, label: 網站左上角顯示的店名, widget: string }
           - { name: branch, label: 分店名, widget: string, required: false }
           - { name: slogan, label: 首頁小標, widget: string, required: false }
           - { name: intro, label: 首頁介紹, widget: text, required: false }
