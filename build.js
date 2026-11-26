@@ -56,7 +56,7 @@ const allPrices = Object.values(MENU).flatMap(c => c.items.map(i => +i.p)).filte
 const rest = {
   '@context': 'https://schema.org', '@type': 'Restaurant', '@id': U + '#restaurant',
   name: shop.name + (shop.branch ? '｜' + shop.branch : ''), alternateName: '八辛吉',
-  description: '台南永康八辛吉手作麻辣燙，八種辛香料熬製手作麻辣湯頭，招牌鴨血、臭豆腐、讚岐烏龍麵。提供多種辣度與不辣選擇，歡迎內用、外帶及外送。',
+  description: '台南永康八辛吉手作麻辣，八種辛香料熬製手作麻辣湯頭，招牌鴨血、臭豆腐、讚岐烏龍麵。提供多種辣度與不辣選擇，歡迎內用、外帶及外送。',
   url: U, image: [U + 'og-image.jpg', U + 'img/storefront.jpg', U + 'img/hero.jpg'], logo: U + 'img/logo.png', telephone: tel,
   address: { '@type': 'PostalAddress', streetAddress: String(shop.address || '').replace(/^.*?區/, ''), addressLocality: (String(shop.address).match(/[^市]+區/) || [''])[0], addressRegion: (String(shop.address).match(/^..市/) || ['臺南市'])[0], postalCode: '710', addressCountry: 'TW' },
   geo: { '@type': 'GeoCoordinates', latitude: 23.0257796, longitude: 120.2596072 },
